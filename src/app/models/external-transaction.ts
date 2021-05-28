@@ -1,3 +1,6 @@
+import { TransactionStatus } from './transaction-status';
+import { TransactionUniqueId } from './transaction-unique-id';
+
 export class ExternalTransaction {
 	id: number;
 	createdAt: Date;
@@ -14,6 +17,8 @@ export class ExternalTransaction {
 	customerCreditCardCin: string;
 	customerCreditCardExpiresAt: string;
 	
+	transactionUniqueId: TransactionUniqueId;
+	transactionStatus: TransactionStatus;
 	
 	
 }

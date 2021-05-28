@@ -7,4 +7,8 @@ export class HelpCenter {
 	fromAccountId: number;
 	question: string;
 	assignedToId: number;
+	
+    staff: Staff;
+	account: Account;
+	
 }

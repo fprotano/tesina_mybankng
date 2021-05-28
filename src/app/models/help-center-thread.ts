@@ -1,3 +1,5 @@
+import { HelpCenter } from './help-center';
+
 export class HelpCenterThread {
 	
 	id: number;
@@ -5,4 +7,6 @@ export class HelpCenterThread {
 	helpCenterId: number;
 	question: string;
 	answer: string;
+	
+	helpCenter: HelpCenter;
 }

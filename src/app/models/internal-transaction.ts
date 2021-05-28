@@ -1,3 +1,5 @@
+import { TransactionUniqueId } from './transaction-unique-id';
+
 export class InternalTransaction {
 	
 	id: number;
@@ -7,5 +9,8 @@ export class InternalTransaction {
 	amount: number;
 	fromAccountId: number;
 	toAccounId: number;
+	
+	transactionUniqueId: TransactionUniqueId;
+	account: Account;
 	
 }
