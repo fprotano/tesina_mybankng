@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Staff } from 'src/app/models/staff';
 import { StaffService } from 'src/app/services/staff/staff.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registrazione',
@@ -9,7 +10,7 @@ import { StaffService } from 'src/app/services/staff/staff.service';
 })
 export class RegistrazioneComponent implements OnInit {
 staff: Staff = new Staff();
-  constructor(private  staffService:StaffService) { }
+  constructor(private  staffService:StaffService, private router:Router) { }
 
   ngOnInit() {
   }
@@ -20,8 +21,8 @@ submit(){
    }
   
    submitSuccess(data : any){
-     alert("Registrazione avvenuta con successo");
-  
+     
+     this.router.navigate(['/user']);
    }
 
    
