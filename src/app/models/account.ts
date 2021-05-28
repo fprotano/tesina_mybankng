@@ -14,6 +14,6 @@ export class Account {
 	creditCardNo: string;
 	creditCardCin: string;
 	creditCardExpiresAt: string;
-	
-	
+
+
 }
