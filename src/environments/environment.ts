@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false
-  ,baseRestURI: "http://localhost:8080/TesinaMyBank/api/"
+  ,baseRestURI: "http://localhost:8080/TesinaMyBank/"
 };
 
 /*
