@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FakeComponent } from './components/fake/fake.component';
 import { FakeInsertComponent } from './components/fake-insert/fake-insert.component';
-import { NavComponent } from './components/nav/nav.component';
+// import { NavComponent } from './components/nav/nav.component';
 import { FakeLoginComponent } from './components/fake-login/fake-login.component';
 import { FakeLogoutComponent } from './components/fake-logout/fake-logout.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -17,7 +17,7 @@ import { RegistrazioneComponent } from './components/Staff/registrazione/registr
     AppComponent,
     FakeComponent,
     FakeInsertComponent,
-    NavComponent,
+    // NavComponent,
     FakeLoginComponent,
     FakeLogoutComponent,
     RegistrazioneComponent
