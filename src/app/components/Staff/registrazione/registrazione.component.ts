@@ -24,6 +24,7 @@ submit(){
   
    }
 
+   
    submitFailure(err : String , err_code : String){
      alert("Errore , email gia' esistente");
    }

@@ -11,6 +11,7 @@ import { FakeLogoutComponent } from './components/fake-logout/fake-logout.compon
 import { HttpClientModule } from '@angular/common/http';
 import { RegistrazioneComponent } from './components/Staff/registrazione/registrazione.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

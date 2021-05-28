@@ -1,4 +1,5 @@
 export class Staff {
+	
  id: number;
 createAt: Date;
 updatedAt: Date;
