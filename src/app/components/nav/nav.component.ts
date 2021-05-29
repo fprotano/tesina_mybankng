@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from 'src/app/services/app.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -9,19 +10,10 @@ import { AppService } from 'src/app/services/app.service';
 export class NavComponent implements OnInit {
 
   logged:boolean = false;
-  constructor(private appService : AppService) {
+  constructor() {
 
 
-     this.appService.onLoginStatusChanged.subscribe((logged: boolean) => {
-         
-       //todo
-         
-       this.logged=logged;
-
-         
-     });
-     
-
+    
 
    }
 

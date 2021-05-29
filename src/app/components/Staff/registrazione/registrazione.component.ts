@@ -2,15 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { Staff } from 'src/app/models/staff';
 import { StaffService } from 'src/app/services/staff/staff.service';
 import { Router } from '@angular/router';
+import { Superclasse } from 'src/superclasse';
 
 @Component({
   selector: 'app-registrazione',
   templateUrl: './registrazione.component.html',
   styleUrls: ['./registrazione.component.css']
 })
-export class RegistrazioneComponent implements OnInit {
+export class RegistrazioneComponent extends Superclasse implements OnInit {
 staff: Staff = new Staff();
-  constructor(private  staffService:StaffService, private router:Router) { }
+  constructor(private  staffService:StaffService, router:Router) {
+
+    super(router);
+   }
 
   ngOnInit() {
   }

@@ -5,11 +5,12 @@ import { FakeInsertComponent } from './components/fake-insert/fake-insert.compon
 import { FakeLoginComponent } from './components/fake-login/fake-login.component';
 import { FakeLogoutComponent } from './components/fake-logout/fake-logout.component';
 import { UserComponent } from './components/Staff/user/user.component';
+import { RegistrazioneComponent } from './components/Staff/registrazione/registrazione.component';
 
 
 const routes: Routes = [
-
-  {path:"user",component:UserComponent}
+  {path:"register",component: RegistrazioneComponent}
+  ,{path:"user",component:UserComponent}
   ,{path:"fake",component:FakeComponent}
   ,{path:"fake-insert",component:FakeInsertComponent}
    ,{path:"fake-login",component:FakeLoginComponent}
