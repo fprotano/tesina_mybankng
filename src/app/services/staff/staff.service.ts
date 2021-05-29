@@ -9,7 +9,7 @@ import { ApiService } from '../api.service';
 })
 export class StaffService  extends ApiService {
 
- private staff:Staff;
+ 
   constructor(http: HttpClient) {
     super(http);
   }
@@ -20,13 +20,13 @@ registrazione(model:Staff , callbackOnSuccess:any, callbackOnFailure:any){
 
   setLoggedUser(value : any) {
       if (value != undefined) {
-        window.localStorage.setItem("user", JSON.stringify(value));
+        window.localStorage.setItem("staff", JSON.stringify(value));
       } 
     }
     
     getLoggedUser() : any {
       
-        var ret = window.localStorage.getItem("user");
+        var ret = window.localStorage.getItem("staff");
         // if (ret == null && default_value != undefined) {
         //   return default_value;
         // }
