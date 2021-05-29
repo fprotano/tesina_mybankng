@@ -14,7 +14,7 @@ export class StaffService  extends ApiService {
     super(http);
   }
 registrazione(model:Staff , callbackOnSuccess:any, callbackOnFailure:any){
-       this.doPost("?staff/registrazione",model,callbackOnSuccess,callbackOnFailure);
+       this.doPost("staff/registrazione",model,callbackOnSuccess,callbackOnFailure);
   }
 
 
