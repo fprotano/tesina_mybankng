@@ -17,4 +17,23 @@ registrazione(model:Staff , callbackOnSuccess:any, callbackOnFailure:any){
        this.doPost("?staff/registrazione",model,callbackOnSuccess,callbackOnFailure);
   }
 
+
+  setLoggedUser(value : any) {
+      if (value != undefined) {
+        window.localStorage.setItem("user", JSON.stringify(value));
+      } 
+    }
+    
+    getLoggedUser() : any {
+      
+        var ret = window.localStorage.getItem("user");
+        // if (ret == null && default_value != undefined) {
+        //   return default_value;
+        // }
+        if (ret != null) {
+          ret = JSON.parse(ret);
+          
+        }
+        return ret;
+      }
 }

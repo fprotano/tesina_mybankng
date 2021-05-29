@@ -10,7 +10,7 @@ import { Superclasse } from 'src/superclasse';
   styleUrls: ['./registrazione.component.css']
 })
 export class RegistrazioneComponent extends Superclasse implements OnInit {
-staff: Staff = new Staff();
+
   constructor(private  staffService:StaffService, router:Router) {
 
     super(router);

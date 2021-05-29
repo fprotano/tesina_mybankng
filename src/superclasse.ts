@@ -1,9 +1,10 @@
 
 import { Router } from '@angular/router';
+import { Staff } from './app/models/staff';
 
 export class Superclasse {
 
-    
+  staff: Staff = new Staff();  
     
     // loading : Boolean = true;
     // loadedSuperclass : Boolean = true;
