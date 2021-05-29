@@ -26,7 +26,7 @@ submit(){
   
    submitSuccess(data : any){
      
-     this.router.navigate(['/user']);
+     this.router.navigate(['/homestaff']);
    }
 
    
