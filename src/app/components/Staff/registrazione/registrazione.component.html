@@ -4,17 +4,22 @@
 <br>
 <br>
 <label>Nome</label><br/>
-<input type="text" [(ngModel)]="staff.name"><br/>
+<input type="text" [(ngModel)]="staffRegistrato.name"><br/>
 
 
 <label>Cognome</label><br/>
-<input type="text" [(ngModel)]="staff.surname" ><br/>
+<input type="text" [(ngModel)]="staffRegistrato.surname" ><br/>
 
 <label>Email</label><br/>
-<input type="text" [(ngModel)]="staff.email" ><br/>
+<input type="text" [(ngModel)]="staffRegistrato.email" ><br/>
 
 <label>Password</label><br/>
-<input type="text" [(ngModel)]="staff.password" ><br/>
+<input type="text" [(ngModel)]="staffRegistrato.password" ><br/>
+<label>Ruolo</label><br/>
+<select [(ngModel)]="staffRegistrato.roleId">
+<option value='1'> Amministratore </option>
+<option value='2'>Verificatore</option>
+<option value='3'>Help Desk</option>
+</select>
 <hr/>
-{{staff.name}}
 <input type="button" class="btn btn-primary" (click)="submit()" value="Registrati"/><br/>

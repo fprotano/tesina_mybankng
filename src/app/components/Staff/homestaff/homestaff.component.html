@@ -7,6 +7,9 @@
 <p>Ciao {{staff.email}}</p>
 <p>Ciao {{staff.password}}</p>
 <br>
+<div *ngIf="staff.role.title=='Amministratore'">
+<li ><a routerLink="/register">Registra un membro del staff</a></li>
+</div>
 <br>
 <h4>{{staff.role.title}}</h4>
 <input (click)="logoutStaff()" value="Logout" type="button">

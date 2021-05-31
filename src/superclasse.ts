@@ -4,7 +4,7 @@ import { Staff } from './app/models/staff';
 import { StaffService } from './app/services/staff/staff.service';
 
 export class Superclasse {
-
+     staffRegistrato: Staff = new Staff();
   staff: Staff = new Staff();  
      logged:boolean = false;
     // loading : Boolean = true;
@@ -24,7 +24,7 @@ export class Superclasse {
   logoutStaff(): void {
     this.staff=new Staff();
     this.staffService.setLoggedUser(this.staff);
-    this.router.navigate(['/register']);
+    this.router.navigate(['/login']);
 
   }
  

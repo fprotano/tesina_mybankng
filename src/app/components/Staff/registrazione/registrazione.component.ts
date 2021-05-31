@@ -21,12 +21,10 @@ export class RegistrazioneComponent extends Superclasse implements OnInit {
 
 
 submit(){
-    this.staffservice.registrazione(this.staff,this.submitSuccess.bind(this),this.submitFailure.bind(this));
+    this.staffservice.registrazione(this.staffRegistrato,this.submitSuccess.bind(this),this.submitFailure.bind(this));
    }
   
    submitSuccess(data : any){
-     this.staff=data;
-     this.staffservice.setLoggedUser(this.staff);
      this.router.navigate(['/homestaff']);
    }
 

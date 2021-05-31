@@ -14,13 +14,13 @@ export class StaffService  extends ApiService {
   constructor(http: HttpClient) {
     super(http);
   }
-registrazione(model:Staff , callbackOnSuccess:any, callbackOnFailure:any){
+registrazione(model: Staff , callbackOnSuccess: any, callbackOnFailure: any) {
        this.doPost("staff/registrazione",model,callbackOnSuccess,callbackOnFailure);
   }
 
 
 
-  login(model:Staff , callbackOnSuccess,callbackOnFailure){
+  login(model: Staff , callbackOnSuccess,callbackOnFailure){
     this.doPost("staff/login",model,callbackOnSuccess,callbackOnFailure);
   }
 
@@ -30,13 +30,13 @@ registrazione(model:Staff , callbackOnSuccess:any, callbackOnFailure:any){
 
 
   
-  setLoggedUser(value : any) {
+  setLoggedUser(value: any) {
       if (value != undefined) {
         window.localStorage.setItem("staff", JSON.stringify(value));
       } 
     }
     
-    getLoggedUser() : any {
+    getLoggedUser(): any {
       
         var ret = window.localStorage.getItem("staff");
         // if (ret == null && default_value != undefined) {
