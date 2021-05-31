@@ -9,7 +9,7 @@ import { HomestaffComponent } from './components/Staff/homestaff/homestaff.compo
 
 
 const routes: Routes = [
-  {path: '', redirectTo: '/register', pathMatch: 'full'},
+  // {path: '', redirectTo: '/register', pathMatch: 'full'},
   {path:"register",component: RegistrazioneComponent}
   ,{path:"homestaff",component:HomestaffComponent}
   ,{path:"fake",component:FakeComponent}
