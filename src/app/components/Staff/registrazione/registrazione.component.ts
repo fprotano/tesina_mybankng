@@ -27,7 +27,7 @@ submit(){
    submitSuccess(data : any){
      this.staff=data;
      this.staffService.setLoggedUser(this.staff);
-     this.router.navigate(['/homestaff']);
+     this.router.navigate(['/login']);
    }
 
    

@@ -18,6 +18,16 @@ registrazione(model:Staff , callbackOnSuccess:any, callbackOnFailure:any){
   }
 
 
+
+  login(model:Staff , callbackOnSuccess,callbackOnFailure){
+    this.doPost("staff/login",model,callbackOnSuccess,callbackOnFailure);
+  }
+
+
+
+
+
+
   setLoggedUser(value : any) {
       if (value != undefined) {
         window.localStorage.setItem("staff", JSON.stringify(value));

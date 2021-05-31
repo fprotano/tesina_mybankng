@@ -6,10 +6,12 @@ import { FakeLoginComponent } from './components/fake-login/fake-login.component
 import { FakeLogoutComponent } from './components/fake-logout/fake-logout.component';
 import { RegistrazioneComponent } from './components/Staff/registrazione/registrazione.component';
 import { HomestaffComponent } from './components/Staff/homestaff/homestaff.component';
+import { LoginComponent } from './components/Staff/login/login.component';
 
 
 const routes: Routes = [
   {path:"register",component: RegistrazioneComponent}
+  ,{path:"login", component: LoginComponent}
   ,{path:"homestaff",component:HomestaffComponent}
   ,{path:"fake",component:FakeComponent}
   ,{path:"fake-insert",component:FakeInsertComponent}
