@@ -12,6 +12,7 @@ import { FakeLogoutComponent } from './components/fake-logout/fake-logout.compon
 import { HttpClientModule } from '@angular/common/http';
 import { RegistrazioneComponent } from './components/Staff/registrazione/registrazione.component';
 import { HomestaffComponent } from './components/Staff/homestaff/homestaff.component';
+import { LoginComponent } from './components/Staff/login/login.component';
 
 
 @NgModule({

@@ -23,6 +23,8 @@ export class LoginComponent  extends Superclasse implements OnInit {
     this.staffService.login(this.staff,this.loginSuccess.bind(this),this.loginFailure.bind(this));
   }
   loginSuccess(data:any){
+     this.staff=data;
+     this.staffService.setLoggedUser(this.staff);
      alert("Login effettuata con successo.");
      this.router.navigate(["/homestaff"]);
   }
