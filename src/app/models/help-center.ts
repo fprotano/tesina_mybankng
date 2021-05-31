@@ -1,5 +1,5 @@
 export class HelpCenter {
-	
+
 	id: number;
 	createdAt: Date;
 	updatedAt: Date;
@@ -7,8 +7,8 @@ export class HelpCenter {
 	fromAccountId: number;
 	question: string;
 	assignedToId: number;
-	
-    staff: Staff;
+
+	// staff: Staff;
 	account: Account;
-	
+
 }

@@ -3,7 +3,7 @@ import { AppService } from 'src/app/services/app.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-nav',
+  selector: 'app-navigazione',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css']
 })
