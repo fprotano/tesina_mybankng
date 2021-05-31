@@ -24,7 +24,8 @@ import { LoginComponent } from './components/Staff/login/login.component';
     FakeLoginComponent,
     FakeLogoutComponent,
     RegistrazioneComponent,
-    HomestaffComponent
+    HomestaffComponent,
+    LoginComponent
 
   ],
   imports: [
