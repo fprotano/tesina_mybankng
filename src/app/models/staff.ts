@@ -1,3 +1,5 @@
+import { Role } from './role';
+
 export class Staff {
 	
  id: number;
@@ -11,6 +13,8 @@ roleId : Number;
 nextOtpCodeAfterDate: Date;
 otpCode:String;
 otpCodeExpiresAt: Date;
+
+role: Role;
 
 
 
