@@ -11,7 +11,7 @@ import { StaffService } from 'src/app/services/staff/staff.service';
 export class HomestaffComponent extends Superclasse implements OnInit {
   
   constructor(router:Router, private staffservice:StaffService) {
-   super(router);
+   super(router, staffservice);
    }
 
   ngOnInit(): void {

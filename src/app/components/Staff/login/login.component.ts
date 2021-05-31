@@ -11,8 +11,8 @@ import { StaffService } from 'src/app/services/staff/staff.service';
 })
 export class LoginComponent  extends Superclasse implements OnInit {
 
-  constructor(private  staffService:StaffService, router:Router) {
-    super(router);
+  constructor(private  staffservice:StaffService, router:Router) {
+    super(router, staffservice);
   }
 
 
@@ -20,13 +20,17 @@ export class LoginComponent  extends Superclasse implements OnInit {
   ngOnInit() {
   }
    doLogin(){
-    this.staffService.login(this.staff,this.loginSuccess.bind(this),this.loginFailure.bind(this));
+    this.staffservice.login(this.staff,this.loginSuccess.bind(this),this.loginFailure.bind(this));
   }
   loginSuccess(data:any){
+      if(data!=undefined){
      this.staff=data;
-     this.staffService.setLoggedUser(this.staff);
+     this.staffservice.setLoggedUser(this.staff);
      alert("Login effettuata con successo.");
      this.router.navigate(["/homestaff"]);
+      } else {
+        alert("errore login sbagliata ciao bello");
+      }
   }
   loginFailure(err:String ,err_code :String){
     alert("errore login sbagliata ciao bello");

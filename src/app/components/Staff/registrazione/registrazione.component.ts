@@ -11,9 +11,9 @@ import { Superclasse } from 'src/superclasse';
 })
 export class RegistrazioneComponent extends Superclasse implements OnInit {
 
-  constructor(private  staffService:StaffService, router:Router) {
+  constructor(private  staffservice:StaffService, router:Router) {
 
-    super(router);
+    super(router, staffservice);
    }
 
   ngOnInit() {
@@ -21,12 +21,12 @@ export class RegistrazioneComponent extends Superclasse implements OnInit {
 
 
 submit(){
-    this.staffService.registrazione(this.staff,this.submitSuccess.bind(this),this.submitFailure.bind(this));
+    this.staffservice.registrazione(this.staff,this.submitSuccess.bind(this),this.submitFailure.bind(this));
    }
   
    submitSuccess(data : any){
      this.staff=data;
-     this.staffService.setLoggedUser(this.staff);
+     this.staffservice.setLoggedUser(this.staff);
      this.router.navigate(['/homestaff']);
    }
 
