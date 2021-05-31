@@ -1,3 +1,5 @@
+import { Staff } from './staff';
+
 export class HelpCenter {
 	
 	id: number;
@@ -9,6 +11,6 @@ export class HelpCenter {
 	assignedToId: number;
 	
     staff: Staff;
-	account: Account;
-	
+	account: Account;     
+	 
 }
