@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Superclasse } from 'src/superclasse';
 import { Router } from '@angular/router';
+import { Superclasse } from 'src/superclasse';
 import { StaffService } from 'src/app/services/staff/staff.service';
+import { AccountService } from 'src/app/services/account/account.service';
 
 
 @Component({
@@ -13,9 +14,9 @@ export class LoginComponent  extends Superclasse implements OnInit {
 
   controllo:boolean;
 
-  constructor(private  staffservice:StaffService, router:Router) {
-    super(router, staffservice);
-  }
+  	constructor(private staffservice:StaffService,router: Router, accountService: AccountService) {
+	super(router, staffservice, accountService);
+ }
 
 
 

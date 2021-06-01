@@ -12,6 +12,9 @@ import { FakeLogoutComponent } from './components/fake-logout/fake-logout.compon
 import { HttpClientModule } from '@angular/common/http';
 import { RegistrazioneComponent } from './components/Staff/registrazione/registrazione.component';
 import { HomestaffComponent } from './components/Staff/homestaff/homestaff.component';
+import { RegistrazioneAccountComponent } from './components/account/registrazione-account/registrazione-account.component';
+import { LoginAccountComponent } from './components/account/login-account/login-account.component';
+import { HomeComponent } from './components/account/home/home.component';
 import { LoginComponent } from './components/Staff/login/login.component';
 
 
@@ -25,7 +28,11 @@ import { LoginComponent } from './components/Staff/login/login.component';
     FakeLogoutComponent,
     RegistrazioneComponent,
     HomestaffComponent,
-    LoginComponent
+    LoginComponent,
+    RegistrazioneAccountComponent,
+    LoginAccountComponent,
+    HomeComponent
+
 
   ],
   imports: [
