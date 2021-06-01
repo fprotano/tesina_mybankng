@@ -32,7 +32,7 @@ export class RegistrazioneAccountComponent extends Superclasse implements OnInit
 	submitSuccess(data: any) {
 		this.account = data;
 		this.accountService.setLoggedUser(this.account);
-		this.router.navigate
+		this.router.navigate(["/home"]);
 	}
 
 

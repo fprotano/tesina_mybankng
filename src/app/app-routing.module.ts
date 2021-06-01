@@ -11,6 +11,7 @@ import { HomestaffComponent } from './components/Staff/homestaff/homestaff.compo
 import { RegistrazioneAccountComponent } from './components/account/registrazione-account/registrazione-account.component';
 import { LoginAccountComponent } from './components/account/login-account/login-account.component';
 import { LoginComponent } from './components/Staff/login/login.component';
+import { HomeComponent } from './components/account/home/home.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
 	, { path: "fake-logout", component: FakeLogoutComponent }
 	, { path: "registrazione-account", component: RegistrazioneAccountComponent }
 	, { path: "login-account", component: LoginAccountComponent }
+	, { path: "home", component: HomeComponent }
 
 ];
 
