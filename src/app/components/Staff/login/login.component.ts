@@ -11,6 +11,8 @@ import { StaffService } from 'src/app/services/staff/staff.service';
 })
 export class LoginComponent  extends Superclasse implements OnInit {
 
+
+  loginOtp : Boolean = false;
   constructor(private  staffservice:StaffService, router:Router) {
     super(router, staffservice);
   }
@@ -23,6 +25,7 @@ export class LoginComponent  extends Superclasse implements OnInit {
     this.staffservice.login(this.staff,this.loginSuccess.bind(this),this.loginFailure.bind(this));
   }
   loginSuccess(data:any){
+    this.loginOtp=true;
       if(data!=undefined){
      this.staff=data;
      this.staffservice.setLoggedUser(this.staff);
