@@ -23,7 +23,7 @@ export class RegistrazioneAccountComponent extends Superclasse implements OnInit
 	}
 
 
-	submit() {
+	submitAccount() {
 		this.accountService.registrazione(this.account, this.submitSuccess.bind(this), this.submitFailure.bind(this));
 	}
 

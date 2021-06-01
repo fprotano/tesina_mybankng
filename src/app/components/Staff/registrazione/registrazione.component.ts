@@ -3,6 +3,7 @@ import { Staff } from 'src/app/models/staff';
 import { StaffService } from 'src/app/services/staff/staff.service';
 import { Router } from '@angular/router';
 import { Superclasse } from 'src/superclasse';
+import { AccountService } from 'src/app/services/account/account.service';
 
 @Component({
   selector: 'app-registrazione',
@@ -11,9 +12,9 @@ import { Superclasse } from 'src/superclasse';
 })
 export class RegistrazioneComponent extends Superclasse implements OnInit {
 
-  constructor(private  staffservice:StaffService, router:Router) {
+  constructor( router:Router, staffService:StaffService, accountService: AccountService,) {
 
-    super(router, staffservice);
+    super(router, staffService, accountService);
    }
 
   ngOnInit() {
@@ -21,7 +22,7 @@ export class RegistrazioneComponent extends Superclasse implements OnInit {
 
 
 submit(){
-    this.staffservice.registrazione(this.staffRegistrato,this.submitSuccess.bind(this),this.submitFailure.bind(this));
+    this.staffService.registrazione(this.staffRegistrato,this.submitSuccess.bind(this),this.submitFailure.bind(this));
    }
   
    submitSuccess(data : any){

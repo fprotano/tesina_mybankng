@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Superclasse } from 'src/superclasse';
 import { StaffService } from 'src/app/services/staff/staff.service';
+import { AccountService } from 'src/app/services/account/account.service';
 
 @Component({
   selector: 'app-homestaff',
@@ -10,12 +11,12 @@ import { StaffService } from 'src/app/services/staff/staff.service';
 })
 export class HomestaffComponent extends Superclasse implements OnInit {
   
-  constructor(router:Router, private staffservice:StaffService) {
-   super(router, staffservice);
+  constructor(router:Router, staffService:StaffService, accountService:AccountService) {
+   super(router, staffService, accountService);
    }
 
   ngOnInit(): void {
-   this.staff=this.staffservice.getLoggedUser();
+   this.staff=this.staffService.getLoggedUser();
     
   }
 
