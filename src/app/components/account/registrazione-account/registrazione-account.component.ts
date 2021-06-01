@@ -13,8 +13,6 @@ import { Superclasse } from 'src/superclasse';
 })
 export class RegistrazioneAccountComponent extends Superclasse implements OnInit {
 
-	account: Account = new Account();
-	active: Account;
 
 
 	constructor(private staffservice:StaffService,router: Router, accountService: AccountService,) {
@@ -39,8 +37,8 @@ export class RegistrazioneAccountComponent extends Superclasse implements OnInit
 	submitFailure(err: String, err_code: String) {
 		alert("Errore , email gia' esistente");
 	}
-	reset(form: NgForm) {
-		this.active = null;
-		form.reset();
-	}
+//	reset(form: NgForm) {
+//		this.active = null;
+//		form.reset();
+//	}
 }
