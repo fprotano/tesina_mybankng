@@ -14,10 +14,13 @@ export class StaffService  extends ApiService {
   constructor(http: HttpClient) {
     super(http);
   }
-registrazione(model: Staff , callbackOnSuccess: any, callbackOnFailure: any) {
+  registrazione(model: Staff , callbackOnSuccess: any, callbackOnFailure: any) {
        this.doPost("staff/registrazione",model,callbackOnSuccess,callbackOnFailure);
   }
 
+  controlOTP(model: Staff, callbackOnSuccess: any, callbackOnFailure: any) {
+       this.doPost("staff/controlloOtp",model,callbackOnSuccess,callbackOnFailure);
+  }
 
 
   login(model: Staff , callbackOnSuccess,callbackOnFailure){

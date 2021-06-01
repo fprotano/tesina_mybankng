@@ -11,8 +11,8 @@ import { StaffService } from 'src/app/services/staff/staff.service';
 })
 export class LoginComponent  extends Superclasse implements OnInit {
 
+  controllo:boolean;
 
-  loginOtp : Boolean = false;
   constructor(private  staffservice:StaffService, router:Router) {
     super(router, staffservice);
   }
@@ -25,18 +25,33 @@ export class LoginComponent  extends Superclasse implements OnInit {
     this.staffservice.login(this.staff,this.loginSuccess.bind(this),this.loginFailure.bind(this));
   }
   loginSuccess(data:any){
-    this.loginOtp=true;
       if(data!=undefined){
      this.staff=data;
-     this.staffservice.setLoggedUser(this.staff);
-     alert("Login effettuata con successo.");
-     this.router.navigate(["/homestaff"]);
+     var OTP = prompt("Per favore inserisci il tuo codice OTP:")
+     this.controlOtp(OTP);
       } else {
-        alert("errore login sbagliata ciao bello");
+        alert("errore login");
       }
   }
   loginFailure(err:String ,err_code :String){
-    alert("errore login sbagliata ciao bello");
+    alert("errore login");
+  }
+
+  controlOtp(OTP:String){
+    this.staff.otpCode=OTP;
+    this.staffservice.controlOTP(this.staff,this.onControlSuccess.bind(this), this.onControlFailure.bind(this))
+  }
+
+  onControlSuccess(data : any){
+      this.staffservice.setLoggedUser(this.staff);
+      this.controllo = data;
+      if(this.controllo){
+        this.router.navigate(["/homestaff"]);
+      }
+  }
+  
+  onControlFailure(err:String ,err_code :String){
+    alert("OTP errato");
   }
 
 }
