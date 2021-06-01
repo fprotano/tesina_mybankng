@@ -18,10 +18,9 @@ export class Superclasse {
        
     }
     logout(): void {
-    //  this.user=new User();
-    // this.userservice.setLoggedUser(this.user);
-    // this.userservice.changeLoaded();
-    // this.router.navigate(['/']);
+     this.account=new Account();
+    this.accountService.setLoggedUser(this.account);
+    this.router.navigate(['/login-account']);
 
   }
 
