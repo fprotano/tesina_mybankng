@@ -20,7 +20,8 @@ export class ListExternalTransactionsComponent extends Superclasse implements On
  }
 
   ngOnInit() {
-  this.externaltransactionservice.findTransactions(this.findSuccess.bind(this), this.findFailure.bind(this))
+    this.staff=this.staffService.getLoggedUser();
+    this.externaltransactionservice.findTransactions(this.staff.id,this.findSuccess.bind(this), this.findFailure.bind(this));
   }
 
   findSuccess(data: any) {

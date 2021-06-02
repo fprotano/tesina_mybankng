@@ -11,7 +11,7 @@ export class ExternalTransactionService extends ApiService {
     super(http);
   }
 
-  findTransactions(callbackOnSuccess,callbackOnFailure){
-    this.doGet("externalTransaction/findAll",callbackOnSuccess,callbackOnFailure);
+  findTransactions(id:number,callbackOnSuccess,callbackOnFailure){
+    this.doPost("externalTransaction/findAllByStaffId",id,callbackOnSuccess,callbackOnFailure);
   }
 }
