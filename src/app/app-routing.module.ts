@@ -13,6 +13,7 @@ import { LoginAccountComponent } from './components/account/login-account/login-
 import { LoginComponent } from './components/Staff/login/login.component';
 import { HomeComponent } from './components/account/home/home.component';
 import { HelpCenterComponent } from './components/helpCenter/help-center/help-center.component';
+import { ListExternalTransactionsComponent } from './components/Staff/externalTransactions/list-external-transactions/list-external-transactions.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,8 @@ const routes: Routes = [
 	, { path: "login-account", component: LoginAccountComponent }
 	, { path: "home", component: HomeComponent }
 	, { path: "help-center", component: HelpCenterComponent }
+	, { path: "Staff/transactions/list", component: ListExternalTransactionsComponent }
+	
 
 ];
 

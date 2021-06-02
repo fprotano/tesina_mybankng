@@ -17,6 +17,7 @@ import { LoginAccountComponent } from './components/account/login-account/login-
 import { HomeComponent } from './components/account/home/home.component';
 import { LoginComponent } from './components/Staff/login/login.component';
 import { HelpCenterComponent } from './components/helpCenter/help-center/help-center.component';
+import { ListExternalTransactionsComponent } from './components/Staff/externalTransactions/list-external-transactions/list-external-transactions.component';
 
 
 @NgModule({
@@ -33,8 +34,10 @@ import { HelpCenterComponent } from './components/helpCenter/help-center/help-ce
     RegistrazioneAccountComponent,
     LoginAccountComponent,
     HomeComponent,
-    HelpCenterComponent
+    HelpCenterComponent,
+    ListExternalTransactionsComponent,
 
+    
 
   ],
   imports: [
