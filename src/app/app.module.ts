@@ -16,6 +16,7 @@ import { RegistrazioneAccountComponent } from './components/account/registrazion
 import { LoginAccountComponent } from './components/account/login-account/login-account.component';
 import { HomeComponent } from './components/account/home/home.component';
 import { LoginComponent } from './components/Staff/login/login.component';
+import { HelpCenterComponent } from './components/helpCenter/help-center/help-center.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { LoginComponent } from './components/Staff/login/login.component';
     LoginComponent,
     RegistrazioneAccountComponent,
     LoginAccountComponent,
-    HomeComponent
+    HomeComponent,
+    HelpCenterComponent
 
 
   ],

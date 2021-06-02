@@ -16,6 +16,7 @@ export class HomeComponent extends Superclasse implements OnInit {
  }
 
   ngOnInit() {
+	this.account= this.accountService.getLoggedUser();
   }
 
 }

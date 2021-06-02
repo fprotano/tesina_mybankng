@@ -12,6 +12,7 @@ import { RegistrazioneAccountComponent } from './components/account/registrazion
 import { LoginAccountComponent } from './components/account/login-account/login-account.component';
 import { LoginComponent } from './components/Staff/login/login.component';
 import { HomeComponent } from './components/account/home/home.component';
+import { HelpCenterComponent } from './components/helpCenter/help-center/help-center.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,7 @@ const routes: Routes = [
 	, { path: "registrazione-account", component: RegistrazioneAccountComponent }
 	, { path: "login-account", component: LoginAccountComponent }
 	, { path: "home", component: HomeComponent }
+	, { path: "help-center", component: HelpCenterComponent }
 
 ];
 
