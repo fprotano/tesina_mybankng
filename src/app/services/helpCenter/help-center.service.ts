@@ -12,6 +12,6 @@ export class HelpCenterService extends ApiService {
 	}
 
   findThreads(callbackOnSuccess,callbackOnFailure){
-    this.doGet("helpCenter/findAllThreads",callbackOnSuccess,callbackOnFailure);
+    this.doGet("helpCenterThread/findAll",callbackOnSuccess,callbackOnFailure);
   }
 }
