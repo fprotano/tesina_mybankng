@@ -1,4 +1,4 @@
 export class TransactionUniqueId {
 	
-	trnsactionId: string;
+	transactionId: string;
 }
