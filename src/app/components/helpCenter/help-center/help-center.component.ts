@@ -21,9 +21,8 @@ export class HelpCenterComponent extends Superclasse implements OnInit {
 	}
 
 	ngOnInit() {
-		this.helpcenterservice.findThreads(this.account.id, this.findSuccess.bind(this), this.findFailure.bind(this));
-    this.account = this.accountService.getLoggedUser();
-    
+    this.helpcenterservice.findThreads(this.account.id, this.findSuccess.bind(this), this.findFailure.bind(this));
+     this.account = this.accountService.getLoggedUser();
 	}
 
 
