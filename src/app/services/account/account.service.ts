@@ -21,7 +21,7 @@ export class AccountService extends ApiService {
     this.doPost("account/login",model,callbackOnSuccess,callbackOnFailure);
   }
 
-setLoggedUser(value: any) {
+ setLoggedUser(value: any) {
       if (value != undefined) {
         window.localStorage.setItem("account", JSON.stringify(value));
       } 

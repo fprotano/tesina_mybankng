@@ -1,18 +1,26 @@
-<br><br><br><br>
-<p>Ciao</p>
-<table>
-        <thead>
-            <th>Domanda</th>
-            <th>Risposta</th>
-            <th>HelpCenter</th>
-            <th>Data Creazione</th>
-        </thead>
-        <tbody>
-            <tr *ngFor="let hero of threads">
-                <td>{{hero.question}}</td>
-                <td>{{hero.answer}}</td>
-                <td>{{hero.helpCenter.question}}</td>
-                <td>{{hero.createdAt}}</td>
-            </tr>
-        </tbody>
-    </table>
+<br>
+<br>
+<br>
+<br>
+<div align="center">
+	<p>Ciao {{account.name}}-{{account.id}}</p>
+	<table>
+		<thead>
+			<th>Domanda</th>
+			<th>Risposta</th>
+			<th>HelpCenter</th>
+			<th>Data Creazione</th>
+		</thead>
+		<tbody>
+			<tr *ngFor="let hero of threads">
+				<td>{{hero.question}}</td>
+				<td>{{hero.answer}}</td>
+				<td>{{hero.helpCenter.question}}</td>
+				<td>{{hero.createdAt}}</td>
+			</tr>
+		</tbody>
+	</table>
+	<label>Inserisci una domanda:</label> <br>
+	<textarea name="question" [(ngModel)]="helpCenter.question" rows="2" cols="40"></textarea> <br>
+	<input type="button" (click)="Insert()" value="INVIA" class="btn btn-outline-success">
+</div>
