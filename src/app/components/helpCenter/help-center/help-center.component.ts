@@ -26,6 +26,7 @@ export class HelpCenterComponent extends Superclasse implements OnInit {
 
 
   findSuccess(data: any) {
+    console.log("AAAAAAAAA   " + data);
 		this.threads = data;
 	}
 

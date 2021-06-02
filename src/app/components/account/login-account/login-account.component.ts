@@ -19,7 +19,7 @@ export class LoginAccountComponent extends Superclasse implements OnInit  {
   ngOnInit() {
   }
 
-doLogin(){
+doLoginAccount(){
     this.accountService.login(this.account,this.loginSuccess.bind(this),this.loginFailure.bind(this));
   }
 
