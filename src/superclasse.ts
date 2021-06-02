@@ -1,6 +1,7 @@
 
 import { Router } from '@angular/router';
 import { Account } from './app/models/account';
+import { HelpCenter } from './app/models/help-center';
 import { Staff } from './app/models/staff';
 import { AccountService } from './app/services/account/account.service';
 import { StaffService } from './app/services/staff/staff.service';
@@ -11,6 +12,7 @@ export class Superclasse {
      staff: Staff = new Staff();  
      logged:boolean = false;
      account: Account= new Account();
+     helpCenter: HelpCenter= new HelpCenter();
     // loading : Boolean = true;
     // loadedSuperclass : Boolean = true;
     constructor(protected router:Router, protected staffService: StaffService, protected accountService: AccountService){
