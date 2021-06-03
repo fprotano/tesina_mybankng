@@ -28,7 +28,7 @@ export class LoginComponent  extends Superclasse implements OnInit {
   loginSuccess(data:any){
       if(data!=undefined){
      this.staff=data;
-     var OTP = prompt("Per favore inserisci il tuo codice OTP:")
+     var OTP = prompt("Per favore inserisci il codice OTP che ti abbiamo inviato per email:")
      this.controlOtp(OTP);
       } else {
         alert("errore login");
