@@ -1,0 +1,24 @@
+<p>
+	{{message_feedback}}
+</p>
+<table>
+	<thead>
+		<th>Question</th>
+		<th>Answer</th>
+	</thead>
+	<tbody>
+		<tr *ngFor="let faq of faq_list">
+			<td>{{faq.question}}</td>
+			<td>{{faq.answer}}</td>
+			<div *ngIf="staff.role.title=='Help Desk'">
+				<td><input type="button" value="Cancella" (click)="delete(faq.id)" ></td>
+                 <td><a  [routerLink]="['/faq', faq.id]">Aggiorna faq</a></td>
+			</div>
+		</tr>
+	</tbody>
+</table>
+<br>
+<div *ngIf="staff.role.title=='Help Desk'">
+<a routerLink="/?/??">Vai a pagina Aggiungi Faq</a>
+</div>
+

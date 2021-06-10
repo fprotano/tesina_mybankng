@@ -1,0 +1,31 @@
+<fieldset>
+<legend>
+	  Dettaglio faq
+  </legend>
+  <p>{{message_update}</p>
+<br>
+Domanda:
+{{faq.question}}
+<br>
+Risposta:
+{{faq.answer}}
+<br>
+<br><br>
+</fieldset>
+<br>
+<fieldset>
+  <legend>
+	  Aggiorna faq.
+  </legend>
+  <label>Domanda</label>
+  <br>
+  <input type="text" [(ngModel)]="faqAggiornato.question" >
+  <br>
+  <label>Risposta</label>
+  <br>
+  <input type="text" [(ngModel)]="faqAggiornato.answer" >
+  <hr/>
+  <input type="button" (click)="update()" value="Aggiorna!" >
+</fieldset>
+<br>
+<a routerLink="/?/??">Torna a pagina faq.</a>

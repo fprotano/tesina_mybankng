@@ -1,0 +1,22 @@
+
+
+<fieldset>
+  <legend>
+	  Inserisci Faq
+  </legend>
+  <label>Domanda</label>
+  <br>
+  <input type="text" [(ngModel)]="faq.question" >
+  <br>
+  <label>Risposta</label>
+  <br>
+  <input type="text" [(ngModel)]="faq.answer" >
+  <hr/>
+  <input type="button" (click)="insertFaq()" value="Invia!" >
+</fieldset>
+<br>
+<p>
+	{{message_feedback}}
+</p>
+
+<!-- <a routerLink="/?/??">Torna a pagina Faq</a>
