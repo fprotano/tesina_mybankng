@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core'; 
 import { Routes, RouterModule } from '@angular/router';
 import { FakeComponent } from './components/fake/fake.component';
 import { FakeInsertComponent } from './components/fake-insert/fake-insert.component';
-import { FakeLoginComponent } from './components/fake-login/fake-login.component';
+import { FakeLoginComponent } from './components/fake-login/fake-login.component'; 
 
-
+ 
 import { FakeLogoutComponent } from './components/fake-logout/fake-logout.component';
 import { RegistrazioneComponent } from './components/Staff/registrazione/registrazione.component';
 import { HomestaffComponent } from './components/Staff/homestaff/homestaff.component';
@@ -14,6 +14,8 @@ import { LoginComponent } from './components/Staff/login/login.component';
 import { HomeComponent } from './components/account/home/home.component';
 import { HelpCenterComponent } from './components/helpCenter/help-center/help-center.component';
 import { ListExternalTransactionsComponent } from './components/Staff/externalTransactions/list-external-transactions/list-external-transactions.component';
+import { ListFaqComponent } from './components/faq/list-faq/list-faq.component';
+import { AddFaqComponent } from './components/faq/add-faq/add-faq.component';
 
 
 const routes: Routes = [
@@ -30,6 +32,7 @@ const routes: Routes = [
 	, { path: "home", component: HomeComponent }
 	, { path: "help-center", component: HelpCenterComponent }
 	, { path: "Staff/transactions/list", component: ListExternalTransactionsComponent }
+	, { path: "list-faq", component: ListFaqComponent }
 	
 
 ];

@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module'; 
 
 import { AppComponent } from './app.component';
 import { FakeComponent } from './components/fake/fake.component';
@@ -18,6 +18,8 @@ import { HomeComponent } from './components/account/home/home.component';
 import { LoginComponent } from './components/Staff/login/login.component';
 import { HelpCenterComponent } from './components/helpCenter/help-center/help-center.component';
 import { ListExternalTransactionsComponent } from './components/Staff/externalTransactions/list-external-transactions/list-external-transactions.component';
+import { ListFaqComponent } from './components/faq/list-faq/list-faq.component';
+import { AddFaqComponent } from './components/faq/add-faq/add-faq.component';
 
 
 @NgModule({
@@ -36,8 +38,8 @@ import { ListExternalTransactionsComponent } from './components/Staff/externalTr
     HomeComponent,
     HelpCenterComponent,
     ListExternalTransactionsComponent,
+    ListFaqComponent,
 
-    
 
   ],
   imports: [
