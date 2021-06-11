@@ -26,14 +26,32 @@ doLoginAccount(){
   loginSuccess(data:any){
       if(data!=undefined){
      this.account=data;
+     var OTP = prompt ("per favore inserisci l'otp");
+     
      this.accountService.setLoggedUser(this.account);
-     alert("Login effettuata con successo.");
-     this.router.navigate(["/home"]);
-      } else {
+     this.controlloOTP(OTP) 
+     } else {
         alert("errore login sbagliata");
       }
   }
   loginFailure(err:String ,err_code :String){
     alert("errore login sbagliata");
+  }
+  
+  controlloOTP(OTP:String){
+   this.account.otpCode=OTP;
+    this.accountService.controlloOTP(this.account,this.onControlSuccess.bind(this), onControlFailure.bind(this))
+  
+}
+ onControlSuccess(data : any){
+      this.accountServiceervice.setLoggedUser(this.account);
+      this.controllo = data;
+      if(this.controllo){
+        this.router.navigate(["/homestaff"]);
+      }
+  }
+  
+  onControlFailure(err:String ,err_code :String){
+    alert("OTP errato");
   }
 }

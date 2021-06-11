@@ -15,6 +15,10 @@ export class AccountService extends ApiService {
 	registrazione(model: Account, callbackOnSuccess: any, callbackOnFailure: any) {
 		 this.doPost("account/registrazione",model,callbackOnSuccess,callbackOnFailure);
 	}
+	
+	controlloOTP(model: Account, callbackOnSuccess: any, callbackOnFailure: any){
+	     thise.doPost("account/confermaOTP", model ,  callbackOnSuccess, callbackOnFailure);
+	}
 
 
  login(model: Account , callbackOnSuccess,callbackOnFailure){
