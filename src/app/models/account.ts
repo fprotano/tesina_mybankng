@@ -2,18 +2,18 @@ export class Account {
 	id: number;
 	createdAt: Date;
 	updateAt: Date;
-	iban: string;
+	iban: String;
 	balance: number;
-	email: string;
-	password: string;
-	name: string;
-	surname: string;
+	email: String;
+	password: String;
+	name: String;
+	surname: String;
 	nextOtpCodeAfterDate: Date;
-	otpCode: string;
+	otpCode: String;
 	otpCodeExpiresAt: Date;
-	creditCardNo: string;
-	creditCardCin: string;
-	creditCardExpiresAt: string;
+	creditCardNo: String;
+	creditCardCin: String;
+	creditCardExpiresAt: String;
 
 
 }

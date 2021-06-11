@@ -17,7 +17,7 @@ export class AccountService extends ApiService {
 	}
 	
 	controlloOTP(model: Account, callbackOnSuccess: any, callbackOnFailure: any){
-	     thise.doPost("account/confermaOTP", model ,  callbackOnSuccess, callbackOnFailure);
+	     this.doPost("account/confermaOTP", model ,  callbackOnSuccess, callbackOnFailure);
 	}
 
 
