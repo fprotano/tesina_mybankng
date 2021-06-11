@@ -18,8 +18,11 @@ export class ApiService {
          var restURL = environment.baseRestURI+url;
 		 console.log(restURL);
 		const headers = new HttpHeaders({ 'Content-Type': 'application/json','accept':'application/json'});  
+		
+		
+		console.log(JSON.stringify(data));
 
-         return this.http.post(restURL, JSON.stringify(data), {responseType: 'json', headers}).subscribe((data:any) => {
+         return this.http.post(restURL, data, {responseType: 'json', headers}).subscribe((data:any) => {
                      var response = data;
 
  console.log(response);
