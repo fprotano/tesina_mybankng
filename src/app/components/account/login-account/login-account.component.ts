@@ -49,5 +49,7 @@ doLoginAccount(){
   
   onControlFailure(err:String ,err_code :String){
     alert("OTP errato");
+    
+
   }
 }
