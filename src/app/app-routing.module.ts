@@ -15,6 +15,7 @@ import { HelpCenterComponent } from './components/helpCenter/help-center/help-ce
 import { ListExternalTransactionsComponent } from './components/Staff/externalTransactions/list-external-transactions/list-external-transactions.component';
 import { ListFaqComponent } from './components/faq/list-faq/list-faq.component';
 import { AddFaqComponent } from './components/faq/add-faq/add-faq.component';
+import { VisualizzaInformazioniComponent } from './components/account/visualizza-informazioni/visualizza-informazioni.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,7 @@ const routes: Routes = [
 	, { path: "help-center", component: HelpCenterComponent }
 	, { path: "Staff/transactions/list", component: ListExternalTransactionsComponent }
 	, { path: "list-faq", component: ListFaqComponent }
+	, {path: "Inf-personali-account", component:  VisualizzaInformazioniComponent}
 	
 
 ];

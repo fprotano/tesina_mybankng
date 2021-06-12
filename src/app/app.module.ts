@@ -20,6 +20,7 @@ import { HelpCenterComponent } from './components/helpCenter/help-center/help-ce
 import { ListExternalTransactionsComponent } from './components/Staff/externalTransactions/list-external-transactions/list-external-transactions.component';
 import { ListFaqComponent } from './components/faq/list-faq/list-faq.component';
 import { AddFaqComponent } from './components/faq/add-faq/add-faq.component';
+import { VisualizzaInformazioniComponent } from './components/account/visualizza-informazioni/visualizza-informazioni.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { AddFaqComponent } from './components/faq/add-faq/add-faq.component';
     HelpCenterComponent,
     ListExternalTransactionsComponent,
     ListFaqComponent,
+    VisualizzaInformazioniComponent,
 
 
   ],
