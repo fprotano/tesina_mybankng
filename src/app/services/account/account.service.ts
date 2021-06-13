@@ -18,8 +18,13 @@ export class AccountService extends ApiService {
 	
 	controlloOTP(model: Account, callbackOnSuccess: any, callbackOnFailure: any){
 	     this.doPost("account/confermaOTP", model ,  callbackOnSuccess, callbackOnFailure);
+  }
+  
+  PasswordDimenticata(model:Account,callbackOnSuccess: any, callbackOnFailure: any){
+    	 this.doPost("account/ PasswordDimenticata",model,callbackOnSuccess,callbackOnFailure);
 	}
-
+  
+ 
 
  login(model: Account , callbackOnSuccess,callbackOnFailure){
     this.doPost("account/login",model,callbackOnSuccess,callbackOnFailure);
