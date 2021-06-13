@@ -21,6 +21,7 @@ import { ListExternalTransactionsComponent } from './components/Staff/externalTr
 import { ListFaqComponent } from './components/faq/list-faq/list-faq.component';
 import { AddFaqComponent } from './components/faq/add-faq/add-faq.component';
 import { VisualizzaInformazioniComponent } from './components/account/visualizza-informazioni/visualizza-informazioni.component';
+import { CambiaPasswordComponent } from './components/account/cambia-password/cambia-password.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { VisualizzaInformazioniComponent } from './components/account/visualizza
     ListExternalTransactionsComponent,
     ListFaqComponent,
     VisualizzaInformazioniComponent,
+    CambiaPasswordComponent,
 
 
   ],
