@@ -24,18 +24,18 @@ export class RegistrazioneAccountComponent extends Superclasse implements OnInit
 
 
 	submitAccount() {
-		this.accountService.registrazione(this.account, this.submitSuccess.bind(this), this.submitFailure.bind(this));
+		this.accountService.registrazione(this.accountRegistrato, this.submitSuccess.bind(this), this.submitFailure.bind(this));
 	}
 
 	submitSuccess(data: any) {
-		this.account = data;
-		this.accountService.setLoggedUser(this.account);
+		this.accountRegistrato= data;
+		this.accountService.setLoggedUser(this.accountRegistrato);
 		this.router.navigate(["/home"]);
 	}
 
 
 	submitFailure(err: String, err_code: String) {
-		alert("Errore , email gia' esistente");
+		alert(err);
 	}
 //	reset(form: NgForm) {
 //		this.active = null;

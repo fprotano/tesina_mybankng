@@ -11,7 +11,8 @@ export class Superclasse {
      staffRegistrato: Staff = new Staff();
      staff: Staff = new Staff();  
      logged:boolean = true;
-     account: Account= this.accountService.getLoggedUser();
+     accountRegistrato: Account = new Account();
+      account: Account= this.accountService.getLoggedUser();
      helpCenter: HelpCenter= new HelpCenter();
     // loading : Boolean = true;
     // loadedSuperclass : Boolean = true;

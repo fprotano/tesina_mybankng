@@ -21,7 +21,7 @@ export class AccountService extends ApiService {
   }
   
   PasswordDimenticata(model:Account,callbackOnSuccess: any, callbackOnFailure: any){
-    	 this.doPost("account/ PasswordDimenticata",model,callbackOnSuccess,callbackOnFailure);
+    	 this.doPost("account/pswD",model,callbackOnSuccess,callbackOnFailure);
 	}
   
  
