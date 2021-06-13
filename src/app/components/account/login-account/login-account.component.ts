@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { AccountService } from 'src/app/services/account/account.service';
 import { StaffService } from 'src/app/services/staff/staff.service';
 import { Superclasse } from 'src/superclasse';
+import { Account } from 'src/app/models/account';
 
 @Component({
   selector: 'app-login-account',
@@ -11,12 +12,15 @@ import { Superclasse } from 'src/superclasse';
 })
 export class LoginAccountComponent extends Superclasse implements OnInit  {
 	
+  
 
   constructor(private staffservice:StaffService,router: Router, accountService: AccountService,) {
 	super(router, staffservice, accountService);
  }
 
   ngOnInit() {
+    this.account=new Account();
+    this.staffService.setLoggedUser(this.account);
   }
 
 doLoginAccount(){
@@ -42,8 +46,8 @@ doLoginAccount(){
  onControlSuccess(data : any){
       this.accountService.setLoggedUser(this.account);
       this.account = data;
-     
-     this.router.navigate(["/home"]);
+      console.log(this.logged);
+      this.router.navigate(["/home"]);
       
   }
   

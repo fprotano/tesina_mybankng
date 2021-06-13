@@ -12,7 +12,7 @@ import { AccountService } from 'src/app/services/account/account.service';
 })
 export class NavComponent extends Superclasse implements OnInit {
 
- 
+  
   constructor(router:Router, staffService:StaffService, accountService:AccountService) {
    super(router, staffService, accountService);
    }

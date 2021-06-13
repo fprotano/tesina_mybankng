@@ -10,8 +10,8 @@ export class Superclasse {
 	
      staffRegistrato: Staff = new Staff();
      staff: Staff = new Staff();  
-     logged:boolean = false;
-     account: Account= new Account();
+     logged:boolean = true;
+     account: Account= this.accountService.getLoggedUser();
      helpCenter: HelpCenter= new HelpCenter();
     // loading : Boolean = true;
     // loadedSuperclass : Boolean = true;
@@ -20,8 +20,7 @@ export class Superclasse {
        
     }
     logout(): void {
-     this.account=new Account();
-    this.accountService.setLoggedUser(this.account);
+    window.localStorage.clear();
     this.router.navigate(['/login-account']);
 
   }
@@ -31,6 +30,13 @@ export class Superclasse {
     this.staffService.setLoggedUser(this.staff);
     this.router.navigate(['/login']);
 
+  }
+  changeLogged(): void{
+    if(this.logged){
+      this.logged=false;
+    } else {
+      this.logged=true;
+    }
   }
  
   

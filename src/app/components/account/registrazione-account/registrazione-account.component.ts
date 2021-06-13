@@ -14,12 +14,12 @@ import { Superclasse } from 'src/superclasse';
 export class RegistrazioneAccountComponent extends Superclasse implements OnInit {
 
 
-
 	constructor(private staffservice:StaffService,router: Router, accountService: AccountService,) {
 	super(router, staffservice, accountService);
  }
 
 	ngOnInit() {
+		this.changeLogged();
 	}
 
 

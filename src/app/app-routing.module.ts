@@ -19,7 +19,7 @@ import { VisualizzaInformazioniComponent } from './components/account/visualizza
 
 
 const routes: Routes = [
-	// {path: '', redirectTo: '/register', pathMatch: 'full'},
+	 {path: '', redirectTo: '/login-account', pathMatch: 'full'},
 	{ path: "register", component: RegistrazioneComponent }
 	,{path:  "login", component: LoginComponent  }
 	, { path: "homestaff",  component: HomestaffComponent  }
