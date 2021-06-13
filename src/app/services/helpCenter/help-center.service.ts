@@ -17,8 +17,7 @@ export class HelpCenterService extends ApiService {
   }
 
  insert(model: HelpCenter, callbackOnSuccess: any, callbackOnFailure: any, id:number) {
-	const url = `helpCenter/insert/${id}`; 
-	alert(url);
+	const url = `helpCenter/insert/${id}`;
 		 this.doPost(url,model,callbackOnSuccess,callbackOnFailure);
 	}
 }

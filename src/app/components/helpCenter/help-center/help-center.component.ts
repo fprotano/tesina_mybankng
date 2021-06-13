@@ -38,7 +38,6 @@ export class HelpCenterComponent extends Superclasse implements OnInit {
 	}
 
 	Insert() {
-		alert("id utente: " + this.account.id);
 		this.helpcenterservice.insert(this.helpCenter, this.submitSuccess.bind(this), this.submitFailure.bind(this), this.account.id);
 	}
 
