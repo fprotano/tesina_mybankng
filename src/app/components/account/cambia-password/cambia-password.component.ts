@@ -19,10 +19,11 @@ export class CambiaPasswordComponent extends Superclasse implements OnInit {
   }
   cambiaPassword(){
     this.accountService.PasswordDimenticata(this.accountRegistrato,this.cambiaPasswordSuccess.bind(this),this.cambiaPasswordFailure.bind(this));
-
   }
   cambiaPasswordSuccess(data:any){
-  alert("Password cambiata con successo")
+  alert("Password cambiata con successo") ;
+  this.router.navigate(["/login-account"]);
+
   }
   cambiaPasswordFailure(err:string ,err_code:string){
     alert(err);

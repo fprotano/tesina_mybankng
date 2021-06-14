@@ -1,3 +1,5 @@
+import { Payment } from './payment';
+
 export class Account {
 	id: number;
 	createdAt: Date;
@@ -16,4 +18,5 @@ export class Account {
 	creditCardExpiresAt: String;
 
 
+	payment: Payment;
 }
