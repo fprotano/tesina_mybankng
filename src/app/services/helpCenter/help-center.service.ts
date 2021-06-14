@@ -22,7 +22,7 @@ export class HelpCenterService extends ApiService {
 	}
 
 	findAccountId( callbackOnSuccess, callbackOnFailure, id:Number ){
-		const url = `helpCenter/findAccountId/${id}`;
+		const url = `helpCenter/fAid/${id}`;
 		 this.doGet(url,callbackOnSuccess,callbackOnFailure);
 	}
 }

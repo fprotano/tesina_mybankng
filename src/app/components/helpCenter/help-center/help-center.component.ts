@@ -17,7 +17,7 @@ export class HelpCenterComponent extends Superclasse implements OnInit {
 
 	// tslint:disable-next-line: new-parens
 	threads: Array<HelpCenterThread> = new Array();
-    helpcenters: HelpCenter[];
+	helpcenters: HelpCenter[] = new Array<HelpCenter>();
 
 	constructor(private staffservice: StaffService, router: Router, accountService: AccountService, protected helpcenterservice: HelpCenterService) {
 		super(router, staffservice, accountService);
@@ -54,17 +54,15 @@ export class HelpCenterComponent extends Superclasse implements OnInit {
 	}
 
 	findAccountId() {
-		this.helpcenterservice.findAccountId( this.success.bind(this), this.failure.bind(this), this.account.id);
+		this.helpcenterservice.findAccountId(this.success.bind(this), this.failure.bind(this), this.account.id);
 	}
 
 	success(data: any) {
-		if (data != undefined) {
-			this.helpcenters = data;
-		}
+		this.helpcenters = data;
 	}
 
 	failure(err: String, err_code: String) {
-	alert("Non trovato");
+		alert("Non trovato");
 
 	}
 }
