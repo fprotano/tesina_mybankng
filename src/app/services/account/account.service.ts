@@ -31,7 +31,7 @@ export class AccountService extends ApiService {
     this.doPost("account/login",model,callbackOnSuccess,callbackOnFailure);
   }
 
-  fillPayment(model: Payment, callbackOnSuccess,callbackOnFailure){
+  fillPayment(model: Account, callbackOnSuccess,callbackOnFailure){
     this.doPost("payment/fillPayment",model,callbackOnSuccess,callbackOnFailure);
   }
 

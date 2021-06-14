@@ -18,7 +18,7 @@ export class HomeComponent extends Superclasse implements OnInit {
 
   ngOnInit() {
   this.account= this.accountService.getLoggedUser();
-  this.accountService.fillPayment(this.payment, this.fillSuccess.bind(this), this.fillFailure.bind(this));
+  this.accountService.fillPayment(this.account, this.fillSuccess.bind(this), this.fillFailure.bind(this));
   }
 
   fillSuccess(data:any){
