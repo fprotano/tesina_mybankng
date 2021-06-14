@@ -20,4 +20,9 @@ export class HelpCenterService extends ApiService {
 	const url = `helpCenter/insert/${id}`;
 		 this.doPost(url,model,callbackOnSuccess,callbackOnFailure);
 	}
+
+	findAccountId( callbackOnSuccess, callbackOnFailure, id:Number ){
+		const url = `helpCenter/findAccountId/${id}`;
+		 this.doGet(url,callbackOnSuccess,callbackOnFailure);
+	}
 }

@@ -5,6 +5,7 @@ import { AccountService } from 'src/app/services/account/account.service';
 import { StaffService } from 'src/app/services/staff/staff.service';
 import { Router } from '@angular/router';
 import { HelpCenterService } from 'src/app/services/helpCenter/help-center.service';
+import { HelpCenter } from 'src/app/models/help-center';
 
 @Component({
 	selector: 'app-help-center',
@@ -16,13 +17,16 @@ export class HelpCenterComponent extends Superclasse implements OnInit {
 
 	// tslint:disable-next-line: new-parens
 	threads: Array<HelpCenterThread> = new Array();
+    helpcenters: HelpCenter[];
+
 	constructor(private staffservice: StaffService, router: Router, accountService: AccountService, protected helpcenterservice: HelpCenterService) {
 		super(router, staffservice, accountService);
 	}
 
 	ngOnInit() {
-    this.helpcenterservice.findThreads(this.account.id, this.findSuccess.bind(this), this.findFailure.bind(this));
-     this.account = this.accountService.getLoggedUser();
+		this.helpcenterservice.findThreads(this.account.id, this.findSuccess.bind(this), this.findFailure.bind(this));
+		this.account = this.accountService.getLoggedUser();
+		this.findAccountId();
 	}
 
 
@@ -45,8 +49,22 @@ export class HelpCenterComponent extends Superclasse implements OnInit {
 		this.helpCenter = data;
 	}
 
-
 	submitFailure(err: String, err_code: String) {
 		alert("Errore");
+	}
+
+	findAccountId() {
+		this.helpcenterservice.findAccountId( this.success.bind(this), this.failure.bind(this), this.account.id);
+	}
+
+	success(data: any) {
+		if (data != undefined) {
+			this.helpcenters = data;
+		}
+	}
+
+	failure(err: String, err_code: String) {
+	alert("Non trovato");
+
 	}
 }
