@@ -26,6 +26,7 @@ export class LoginAccountComponent extends Superclasse implements OnInit  {
 doLoginAccount(){
     this.accountService.login(this.account,this.loginSuccess.bind(this),this.loginFailure.bind(this));
   }
+  
 
   loginSuccess(data:any){
       if(data!=undefined){
