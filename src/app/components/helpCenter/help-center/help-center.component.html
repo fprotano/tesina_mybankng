@@ -1,9 +1,9 @@
 <br>
 <br>
 <br>
-<br>
+<br> 
 <div align="center">
-	<p>Ciao {{account.name}}-{{account.id}}</p>
+	<p>Ciao {{account.name}}</p>
 	<table>
 		<thead>
 			<th>Domanda</th>
@@ -20,6 +20,10 @@
 			</tr>
 		</tbody>
 	</table>
+   <p> <b> Domande fatte </b></p> <br/>
+	<li *ngFor="let helpcenter of helpcenters" > 
+	{{helpcenter.question}}</li>
+
 	<label>Inserisci una domanda:</label> <br>
 	<textarea name="question" [(ngModel)]="helpCenter.question" rows="2" cols="40"></textarea> <br>
 	<input type="button" (click)="Insert()" value="INVIA" class="btn btn-outline-success">
