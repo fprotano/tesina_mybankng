@@ -29,4 +29,5 @@ export class HomeComponent extends Superclasse implements OnInit {
   fillFailure(err:String ,err_code :String){
     alert("errore login sbagliata");
   }
+  
 }
