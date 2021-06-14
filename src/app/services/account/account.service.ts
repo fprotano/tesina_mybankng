@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { ApiService } from '../api.service';
 import { HttpClient } from '@angular/common/http';
 import { Account } from 'src/app/models/account';
+import { Payment } from 'src/app/models/payment';
 
 @Injectable({
 	providedIn: 'root'
@@ -28,6 +29,10 @@ export class AccountService extends ApiService {
 
  login(model: Account , callbackOnSuccess,callbackOnFailure){
     this.doPost("account/login",model,callbackOnSuccess,callbackOnFailure);
+  }
+
+  fillPayment(model: Payment, callbackOnSuccess,callbackOnFailure){
+    this.doPost("payment/fillPayment",model,callbackOnSuccess,callbackOnFailure);
   }
 
  setLoggedUser(value: any) {
