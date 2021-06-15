@@ -34,6 +34,7 @@ export class PaymentComponent extends Superclasse implements OnInit {
     myform.action = this.payment.urlNotify;
     myform.email.value = this.payment.email;
     myform.amount.value = this.payment.amount;
+    myform.transactionId.value = this.payment.transaction_id;
     myform.customCode.value = this.payment.customCode;
     myform.urlSuccess.value = this.payment.urlSuccess;
     myform.urlUnDo.value = this.payment.urlUndo;
