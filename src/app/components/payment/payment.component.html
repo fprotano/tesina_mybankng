@@ -1,1 +1,8 @@
-<p>payment works!</p>
+<form id = "auction" method = "POST" action="{{payment.urlNotify}}">
+<input type="hidden"  name="email" value="{{payment.email}}">
+<input type="hidden"  name= "amount" value="{{payment.amount}}">
+<input type="hidden"  name="customCode" value="{{payment.customCode}}">
+<input type="hidden"  name="urlSuccess" value="{{payment.urlSuccess}}">
+<input type="hidden"  name="urlUnDo" value ="{{payment.urlUnDo}}">
+
+</form>
