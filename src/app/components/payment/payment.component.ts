@@ -11,7 +11,7 @@ import { Payment } from 'src/app/models/payment';
   styleUrls: ['./payment.component.css']
 })
 export class PaymentComponent extends Superclasse implements OnInit {
-  payment: Payment;
+  payment: Payment = new Payment();
   @ViewChild('payment', {static: false}) myform: ElementRef<HTMLFormElement>;
   constructor(private staffservice:StaffService,router: Router, accountService: AccountService) {
 	super(router, staffservice, accountService);

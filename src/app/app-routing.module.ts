@@ -21,8 +21,8 @@ const routes: Routes = [
 	, {path: "Inf-personali-account", component:  VisualizzaInformazioniComponent}
 	, {path: "cambia-password",component:CambiaPasswordComponent }
 	, {path: "payment",component:PaymentComponent }
+	, {path: "init-payment/:id",component:LoginAccountComponent }
 	
-
 ];
 
 

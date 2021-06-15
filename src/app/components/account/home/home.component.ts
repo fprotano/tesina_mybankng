@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { AccountService } from 'src/app/services/account/account.service';
 import { StaffService } from 'src/app/services/staff/staff.service';
 import { Superclasse } from 'src/superclasse';
@@ -11,26 +11,21 @@ import { Payment } from 'src/app/models/payment';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent extends Superclasse implements OnInit {
-  payment: Payment;
- 	constructor(private staffservice:StaffService,router: Router, accountService: AccountService) {
-	super(router, staffservice, accountService);
+  payment: Payment = new Payment();
+ 	constructor(private staffservice:StaffService,router: Router, accountService: AccountService,private route: ActivatedRoute) {
+  super(router, staffservice, accountService);
+  
  }
 
   ngOnInit() {
   this.account= this.accountService.getLoggedUser();
-  this.accountService.fillPayment(this.payment, this.fillSuccess.bind(this), this.fillFailure.bind(this));
+  this.payment= this.accountService.getPayment();
+
+  if(this.payment.email!=null){
+    this.router.navigate(["/payment"]);
+  }
   }
 
-  fillSuccess(data:any){
-      if(data!=undefined){
-     this.payment=data;
-     console.log(this.payment);
-     this.accountService.setPayment(this.payment);
-     this.router.navigate(["/payment"]);
-      } 
-     } 
-  fillFailure(err:String ,err_code :String){
-    alert("Pagamento non accessibile");
-  }
+  
   
 }

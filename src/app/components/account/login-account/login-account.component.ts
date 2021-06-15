@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { AccountService } from 'src/app/services/account/account.service';
 import { StaffService } from 'src/app/services/staff/staff.service';
 import { Superclasse } from 'src/superclasse';
 import { Account } from 'src/app/models/account';
+import { Payment } from 'src/app/models/payment';
 
 @Component({
   selector: 'app-login-account',
@@ -13,18 +14,40 @@ import { Account } from 'src/app/models/account';
 export class LoginAccountComponent extends Superclasse implements OnInit  {
 	
   
-
-  constructor(private staffservice:StaffService,router: Router, accountService: AccountService,) {
-	super(router, staffservice, accountService);
+  payment: Payment = new Payment();
+  constructor(private staffservice:StaffService,router: Router, accountService: AccountService,private route: ActivatedRoute) {
+  super(router, staffservice, accountService);
+  
  }
 
   ngOnInit() {
     this.account=new Account();
     this.staffService.setLoggedUser(this.account);
+    var _self = this;
+    this.route.paramMap.subscribe(function(params){
+      
+      var id =  params.get('id');
+      console.log("id arrivato" + id);
+      if(id!=null){
+        _self.payment=new Payment();
+        _self.payment.id = id;
+        _self.accountService.fillPayment(_self.payment, _self.fillSuccess.bind(_self), _self.fillFailure.bind(_self));
+      }
+    });
   }
 
 doLoginAccount(){
     this.accountService.login(this.account,this.loginSuccess.bind(this),this.loginFailure.bind(this));
+  }
+  fillSuccess(data:any){
+      if(data!=undefined){
+     this.payment=data;
+     this.accountService.setPayment(this.payment);
+     console.log(this.payment + "  AAAAA");
+      } 
+     } 
+  fillFailure(err:String ,err_code :String){
+    alert("Pagamento non accessibile");
   }
 
 
@@ -32,7 +55,7 @@ doLoginAccount(){
       if(data!=undefined){
      this.account=data;
      var OTP = prompt ("per favore inserisci l'otp");
-     this.controlloOTP(OTP)
+     this.controlloOTP(OTP);
       } 
      } 
   loginFailure(err:String ,err_code :String){
