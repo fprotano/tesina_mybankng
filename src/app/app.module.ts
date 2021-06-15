@@ -24,14 +24,14 @@ import { PaymentComponent } from './components/payment/payment.component';
 @NgModule({
   declarations: [
     AppComponent,
-    
+
     NavComponent,
-    
+
     RegistrazioneAccountComponent,
     LoginAccountComponent,
     HomeComponent,
     HelpCenterComponent,
-    
+
     ListFaqComponent,
     VisualizzaInformazioniComponent,
     CambiaPasswordComponent,
