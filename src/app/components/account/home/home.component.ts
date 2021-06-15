@@ -25,7 +25,7 @@ export class HomeComponent extends Superclasse implements OnInit {
       if(data!=undefined){
      this.payment=data;
      this.accountService.setPayment(this.payment);
-     this.router.navigate(["/pagamento"]);
+     this.router.navigate(["/payment"]);
       } 
      } 
   fillFailure(err:String ,err_code :String){
