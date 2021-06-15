@@ -12,7 +12,7 @@ import { Payment } from 'src/app/models/payment';
 })
 export class PaymentComponent extends Superclasse implements OnInit {
   payment: Payment;
-  constructor(private staffservice:StaffService,router: Router, accountService: AccountService,) {
+  constructor(private staffservice:StaffService,router: Router, accountService: AccountService, paymentservice: PaymentSer) {
 	super(router, staffservice, accountService);
  }
 
@@ -21,7 +21,29 @@ export class PaymentComponent extends Superclasse implements OnInit {
   }
 
   pay(){
-    this
+    this.accountService.pay(this.payment, this.callbackPaymnetOnSuccess.bind(this), this.callbackPaymnetOnFailure.bind(this));
+  }
+
+  callbackPaymnetOnSuccess(data: any): void {
+
+    console.log('nel callbackPaymnetOnSuccess del makePayment > ' + JSON.stringify(data));
+    this.payment = data;
+
+    var myform = document.getElementById('payment');
+
+    myform.action = this.payment.urlNotify;
+    myform.email.value = this.payment.email;
+    myform.amount.value = this.payment.amount;
+    myform.customCode.value = this.payment.customCode;
+    myform.urlSuccess.value = this.payment.urlSuccess;
+    myform.urlUnDo.value = this.payment.urlUndo;
+    myform.urlNotify.value = this.payment.urlNotify;
+
+   myform.submit();
+  }
+
+  callbackPaymnetOnFailure(data: any): any {
+    console.log(data);
   }
 
 }
