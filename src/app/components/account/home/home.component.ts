@@ -18,18 +18,19 @@ export class HomeComponent extends Superclasse implements OnInit {
 
   ngOnInit() {
   this.account= this.accountService.getLoggedUser();
-  this.accountService.fillPayment(this.account, this.fillSuccess.bind(this), this.fillFailure.bind(this));
+  this.accountService.fillPayment(this.payment, this.fillSuccess.bind(this), this.fillFailure.bind(this));
   }
 
   fillSuccess(data:any){
       if(data!=undefined){
      this.payment=data;
+     console.log(this.payment);
      this.accountService.setPayment(this.payment);
      this.router.navigate(["/payment"]);
       } 
      } 
   fillFailure(err:String ,err_code :String){
-    alert("errore login sbagliata");
+    alert("Pagamento non accessibile");
   }
   
 }

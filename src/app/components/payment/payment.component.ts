@@ -39,7 +39,7 @@ export class PaymentComponent extends Superclasse implements OnInit {
     this.myform.nativeElement.urlUnDo.value = this.payment.urlUndo;
     this.myform.nativeElement.urlNotify.value = this.payment.urlNotify;
 
-    this.myform.nativeElement.submit();
+   this.myform.nativeElement.submit();
   }
 
   callbackPaymnetOnFailure(data: any): any {

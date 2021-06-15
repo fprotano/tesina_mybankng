@@ -7,7 +7,8 @@ import { AccountService } from './app/services/account/account.service';
 import { StaffService } from './app/services/staff/staff.service';
 
 export class Superclasse {
-	
+  
+    
      staffRegistrato: Staff = new Staff();
      staff: Staff = new Staff();  
      logged:boolean = true;
