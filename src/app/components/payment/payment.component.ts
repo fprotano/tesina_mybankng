@@ -20,4 +20,8 @@ export class PaymentComponent extends Superclasse implements OnInit {
     this.payment = this.accountService.getPayment();
   }
 
+  pay(){
+    this
+  }
+
 }

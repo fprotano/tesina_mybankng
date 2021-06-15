@@ -1,8 +1,30 @@
-<form id = "auction" method = "POST" action="{{payment.urlNotify}}">
-<input type="hidden"  name="email" value="{{payment.email}}">
-<input type="hidden"  name= "amount" value="{{payment.amount}}">
-<input type="hidden"  name="customCode" value="{{payment.customCode}}">
-<input type="hidden"  name="urlSuccess" value="{{payment.urlSuccess}}">
-<input type="hidden"  name="urlUnDo" value ="{{payment.urlUnDo}}">
+ <div>
+	<table>
+		<thead>
+			<th> Amount </th>
+			<th> Email </th>
+			<th> Codice Personale </th>
+			<th> Numero Transazione </th>
+		</thead>
+		<tbody>
+			
+			<tr>
+				<td>{{payment.amount}}</td>
+				<td>{{payment.email}}</td>
+				<td>{{payment.customCode}}</td>
+				<td>{{payment.transaction_id}}</td>
+				<button type="submit" (click)="pay()">Paga Ordine</button>
+			</tr>
+		</tbody>
+	</table>
+</div>
 
-</form>
+
+	<form id="payment" method="post" action="{{payment.urlNotify}}">
+		<input type="hidden" name="email">
+		<input type="hidden" name="amount">
+		<input type="hidden" name="customCode">
+		<input type="hidden" name="urlSuccess">
+		<input type="hidden" name="urlUnDo">
+		<input type="hidden" name="urlNotify">
+	</form>

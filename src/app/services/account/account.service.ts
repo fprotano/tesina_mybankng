@@ -54,6 +54,10 @@ export class AccountService extends ApiService {
         }
         return ret;
       }
+
+      pay(model: Payment, callbackOnSuccess,callbackOnFailure){
+            this.doPost("payment/pay",model,callbackOnSuccess,callbackOnFailure);
+      }
     
     getLoggedUser(): any {
       

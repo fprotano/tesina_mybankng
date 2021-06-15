@@ -2,10 +2,10 @@ export class Payment {
 
     amount: Number;
 	email: String;
-	custom_code: String;
+	customCode: String;
 	transaction_id: String;
-	url_undo: String;
-	url_success: String;
-	url_notify: String;
+	urlUndo: String;
+	urlSuccess: String;
+	urlNotify: String;
 
 }
