@@ -40,6 +40,20 @@ export class AccountService extends ApiService {
         window.localStorage.setItem("account", JSON.stringify(value));
       } 
     }
+
+    setPayment(value: any) {
+      if (value != undefined) {
+        window.localStorage.setItem("payment", JSON.stringify(value));
+      } 
+    }
+    getPayment(): any {
+      
+        var ret = window.localStorage.getItem("payment");
+        if (ret != null) {
+        ret = JSON.parse(ret);
+        }
+        return ret;
+      }
     
     getLoggedUser(): any {
       
