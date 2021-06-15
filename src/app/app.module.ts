@@ -15,7 +15,6 @@ import { HomeComponent } from './components/account/home/home.component';
 
 import { HelpCenterComponent } from './components/helpCenter/help-center/help-center.component';
 import { ListFaqComponent } from './components/faq/list-faq/list-faq.component';
-import { AddFaqComponent } from './components/faq/add-faq/add-faq.component';
 import { VisualizzaInformazioniComponent } from './components/account/visualizza-informazioni/visualizza-informazioni.component';
 import { CambiaPasswordComponent } from './components/account/cambia-password/cambia-password.component';
 import { PaymentComponent } from './components/payment/payment.component';
