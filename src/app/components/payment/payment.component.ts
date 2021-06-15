@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { AccountService } from 'src/app/services/account/account.service';
 import { StaffService } from 'src/app/services/staff/staff.service';
@@ -12,6 +12,7 @@ import { Payment } from 'src/app/models/payment';
 })
 export class PaymentComponent extends Superclasse implements OnInit {
   payment: Payment;
+  @ViewChild('payment', {static: false}) myform: ElementRef<HTMLFormElement>;
   constructor(private staffservice:StaffService,router: Router, accountService: AccountService) {
 	super(router, staffservice, accountService);
  }
@@ -29,18 +30,16 @@ export class PaymentComponent extends Superclasse implements OnInit {
     console.log('nel callbackPaymnetOnSuccess del makePayment > ' + JSON.stringify(data));
     this.payment = data;
 
-    var myform = document.getElementById('payment');
+    this.myform.nativeElement.action = this.payment.urlNotify;
+    this.myform.nativeElement.email.value = this.payment.email;
+    this.myform.nativeElement.amount.value = this.payment.amount;
+    this.myform.nativeElement.transactionId.value = this.payment.transaction_id;
+    this.myform.nativeElement.customCode.value = this.payment.customCode;
+    this.myform.nativeElement.urlSuccess.value = this.payment.urlSuccess;
+    this.myform.nativeElement.urlUnDo.value = this.payment.urlUndo;
+    this.myform.nativeElement.urlNotify.value = this.payment.urlNotify;
 
-    myform.action = this.payment.urlNotify;
-    myform.email.value = this.payment.email;
-    myform.amount.value = this.payment.amount;
-    myform.transactionId.value = this.payment.transaction_id;
-    myform.customCode.value = this.payment.customCode;
-    myform.urlSuccess.value = this.payment.urlSuccess;
-    myform.urlUnDo.value = this.payment.urlUndo;
-    myform.urlNotify.value = this.payment.urlNotify;
-
-   myform.submit();
+    this.myform.nativeElement.submit();
   }
 
   callbackPaymnetOnFailure(data: any): any {

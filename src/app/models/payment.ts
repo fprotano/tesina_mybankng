@@ -1,11 +1,11 @@
 export class Payment {
 
     amount: Number;
-	email: String;
-	customCode: String;
-	transaction_id: String;
-	urlUndo: String;
-	urlSuccess: String;
-	urlNotify: String;
+	email: string;
+	customCode: string;
+	transaction_id: string;
+	urlUndo: string;
+	urlSuccess: string;
+	urlNotify: string;
 
 }
