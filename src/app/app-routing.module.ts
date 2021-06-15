@@ -12,7 +12,7 @@ import { PaymentComponent } from './components/payment/payment.component';
 
 
 const routes: Routes = [
-	 {path: '', redirectTo: '/login-account', pathMatch: 'full'},
+	 {path: '', redirectTo: '/login-account', pathMatch: 'full'}
 	, { path: "registrazione-account", component: RegistrazioneAccountComponent }
 	, { path: "login-account", component: LoginAccountComponent }
 	, { path: "home", component: HomeComponent }
