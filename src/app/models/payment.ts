@@ -4,5 +4,8 @@ export class Payment {
 	email: String;
 	custom_code: String;
 	transaction_id: String;
-	url: String;
+	url_undo: String;
+	url_success: String;
+	url_notify: String;
+
 }
