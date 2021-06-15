@@ -23,19 +23,8 @@ export class ListFaqComponent implements OnInit {
     alert(err);
   }
 
-  delete(id : Number){
-    
-    this.faqService.delete(id,this.successDelete.bind(this), this.failureDelete.bind(this));
-  }
 
-  successDelete(data: any){
-     this.message_feedback = "Cancellazione avvenuta con successo.";
-     this.faqService.findAll(this.caricamentoFaqOk.bind(this), this.caricamentoFaqNo.bind(this));
-  }
-  failureDelete(err: String, err_code: String){
-     this.message_feedback=err;
-  }
-
+  
 
 
 
