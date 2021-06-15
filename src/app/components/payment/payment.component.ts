@@ -12,7 +12,7 @@ import { Payment } from 'src/app/models/payment';
 })
 export class PaymentComponent extends Superclasse implements OnInit {
   payment: Payment;
-  constructor(private staffservice:StaffService,router: Router, accountService: AccountService, paymentservice: PaymentSer) {
+  constructor(private staffservice:StaffService,router: Router, accountService: AccountService) {
 	super(router, staffservice, accountService);
  }
 
