@@ -26,7 +26,7 @@ export class LoginAccountComponent extends Superclasse implements OnInit  {
     var _self = this;
     this.route.paramMap.subscribe(function(params){
       
-      
+
       var id =  params.get('id');
       console.log("id arrivato" + id);
       if(id!=null){
@@ -43,6 +43,7 @@ doLoginAccount(){
   fillSuccess(data:any){
       if(data!=undefined){
      this.payment=data;
+     this.payment.account=this.account;
      this.accountService.setPayment(this.payment);
      console.log(this.payment + "  AAAAA");
       } 

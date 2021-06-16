@@ -1,3 +1,5 @@
+import { Account } from './account';
+
 export class Payment {
 
 	id: Number;
@@ -8,4 +10,6 @@ export class Payment {
 	urlUndo: string;
 	urlSuccess: string;
 	urlNotify: string;
+
+	account: Account;
 }
