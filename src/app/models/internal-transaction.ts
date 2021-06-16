@@ -11,6 +11,6 @@ export class InternalTransaction {
 	toAccounId: number;
 	
 	transactionUniqueId: TransactionUniqueId;
-	account: Account;
-	
+	accountFrom: Account;
+	accountTo: Account;
 }

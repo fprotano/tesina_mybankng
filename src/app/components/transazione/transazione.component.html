@@ -1,0 +1,28 @@
+<fieldset>
+
+	<br>
+	Benvenuto
+	{{account.name}}
+	{{account.surname}}
+	<br>
+	<legend>
+		Elenco delle tue transazioni:
+	</legend>
+
+	<table>
+	<thead>
+		<th>Data</th>
+		<th>Importo</th>
+		<th>Mittente</th>
+		<th>Destinatario</th>
+	</thead>
+	<tbody>
+		<tr *ngFor="let transazione of transazioni">
+			<td>{{transazione.createdAt}}</td>
+			<td>{{transazione.amount}}</td>
+			<td>{{transazione.accountFrom.name}} {{transazione.accountFrom.surname}}</td>
+			<td>{{transazione.accountTo.name}} {{transazione.accountTo.surname}}</td>
+		</tr>
+	</tbody>
+</table>
+</fieldset>
