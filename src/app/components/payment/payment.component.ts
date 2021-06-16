@@ -29,23 +29,32 @@ export class PaymentComponent extends Superclasse implements OnInit {
 
   callbackPaymnetOnSuccess(data: any): void {
 
-    console.log('nel callbackPaymnetOnSuccess del makePayment > ' + JSON.stringify(data));
-    this.payment = data;
 
-    this.myform.nativeElement.action = this.payment.urlNotify;
-    this.myform.nativeElement.email.value = this.payment.email;
-    this.myform.nativeElement.amount.value = this.payment.amount;
-    this.myform.nativeElement.transactionId.value = this.payment.transactionId;
-    this.myform.nativeElement.customCode.value = this.payment.customCode;
-    this.myform.nativeElement.urlSuccess.value = this.payment.urlSuccess;
-    this.myform.nativeElement.urlUnDo.value = this.payment.urlUndo;
-    this.myform.nativeElement.urlNotify.value = this.payment.urlNotify;
-    console.log(this.payment);
-   this.myform.nativeElement.submit();
-   this.router.navigate[("/home")];
+
+    this.accountService.sendPaymentData(this.payment, this.callbackPaymentDataSuccess.bind(this), this.callbackPaymentDataFailure.bind(this));
+  //   console.log('nel callbackPaymnetOnSuccess del makePayment > ' + JSON.stringify(data));
+  //   this.payment = data;
+
+  //   this.myform.nativeElement.action = this.payment.urlNotify;
+  //   this.myform.nativeElement.email.value = this.payment.email;
+  //   this.myform.nativeElement.amount.value = this.payment.amount;
+  //   this.myform.nativeElement.transactionId.value = this.payment.transactionId;
+  //   this.myform.nativeElement.customCode.value = this.payment.customCode;
+  //   this.myform.nativeElement.urlSuccess.value = this.payment.urlSuccess;
+  //   this.myform.nativeElement.urlUnDo.value = this.payment.urlUndo;
+  //   this.myform.nativeElement.urlNotify.value = this.payment.urlNotify;
+  //   console.log(this.payment);
+  //  this.myform.nativeElement.submit();
+  //  this.router.navigate[("/home")];
   }
 
   callbackPaymnetOnFailure(data: any): any {
+    console.log(data);
+  }
+  callbackPaymentDataSuccess(data: any): any {
+    this.router.navigate[("/home")];
+  }
+  callbackPaymentDataFailure(data: any): any {
     console.log(data);
   }
 

@@ -59,6 +59,9 @@ export class AccountService extends ApiService {
             this.doPost("internalTransaction/insert",model,callbackOnSuccess,callbackOnFailure);
       }
     
+      sendPaymentData(model: Payment, callbackOnSuccess,callbackOnFailure){
+        this.doPost("payment/sendData",model,callbackOnSuccess,callbackOnFailure);
+      }
     getLoggedUser(): any {
       
         var ret = window.localStorage.getItem("account");
