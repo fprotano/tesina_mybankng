@@ -43,7 +43,6 @@ doLoginAccount(){
   fillSuccess(data:any){
       if(data!=undefined){
      this.payment=data;
-     this.payment.account=this.account;
      this.accountService.setPayment(this.payment);
      console.log(this.payment + "  AAAAA");
       } 
