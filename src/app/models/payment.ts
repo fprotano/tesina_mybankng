@@ -1,5 +1,6 @@
 export class Payment {
 
+	id: Number;
     amount: Number;
 	email: string;
 	customCode: string;

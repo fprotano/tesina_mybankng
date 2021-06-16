@@ -30,7 +30,7 @@ export class LoginAccountComponent extends Superclasse implements OnInit  {
       console.log("id arrivato" + id);
       if(id!=null){
         _self.payment=new Payment();
-        _self.payment.id = id;
+        _self.payment.id = parseInt(id);
         _self.accountService.fillPayment(_self.payment, _self.fillSuccess.bind(_self), _self.fillFailure.bind(_self));
       }
     });
