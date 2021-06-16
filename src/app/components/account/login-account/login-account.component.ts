@@ -44,9 +44,9 @@ doLoginAccount(){
       if(data!=undefined){
      this.payment=data;
      this.accountService.setPayment(this.payment);
-     console.log(this.payment + "  AAAAA");
+     console.log(JSON.stringify(this.payment) + "  AAAAA");
       } 
-     } 
+     }
   fillFailure(err:String ,err_code :String){
     alert("Pagamento non accessibile");
   }

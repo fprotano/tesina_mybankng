@@ -1,5 +1,7 @@
  <div>
+	 
 	<table>
+		
 		<thead>
 			<th> Amount </th>
 			<th> Email </th>
@@ -12,15 +14,17 @@
 				<td>{{payment.amount}}</td>
 				<td>{{payment.email}}</td>
 				<td>{{payment.customCode}}</td>
-				<td>{{payment.transaction_id}}</td>
-				<button type="submit" (click)="pay()">Paga Ordine</button>
+				<td>{{payment.transactionId}}</td>
+				
+				
 			</tr>
 		</tbody>
 	</table>
+	<button type="submit" (click)="pay()">Paga Ordine</button><br>
 </div>
 
 
-	<form #payment id="payment" method="post" action="{{payment.urlNotify}}">
+	<form #paymentForm id="paymentForm" method="post" action="{{payment.urlNotify}}">
 		<input type="hidden" name="email">
 		<input type="hidden" name="amount">
 		<input type="hidden" name="transactionId">
@@ -29,3 +33,5 @@
 		<input type="hidden" name="urlUnDo">
 		<input type="hidden" name="urlNotify">
 	</form>
+
+	

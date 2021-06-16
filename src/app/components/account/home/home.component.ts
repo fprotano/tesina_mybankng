@@ -22,6 +22,7 @@ export class HomeComponent extends Superclasse implements OnInit {
   this.payment= this.accountService.getPayment();
 
   if(this.payment.email!=null){
+    console.log(JSON.stringify(this.payment));
     this.router.navigate(["/payment"]);
   }
   }

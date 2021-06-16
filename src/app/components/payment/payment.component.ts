@@ -12,7 +12,7 @@ import { Payment } from 'src/app/models/payment';
 })
 export class PaymentComponent extends Superclasse implements OnInit {
   payment: Payment = new Payment();
-  @ViewChild('payment', {static: false}) myform: ElementRef<HTMLFormElement>;
+  @ViewChild('paymentForm', {static: false}) myform: ElementRef<HTMLFormElement>;
   constructor(private staffservice:StaffService,router: Router, accountService: AccountService) {
 	super(router, staffservice, accountService);
  }
@@ -20,6 +20,7 @@ export class PaymentComponent extends Superclasse implements OnInit {
   ngOnInit() {
     this.payment = this.accountService.getPayment();
     this.payment.account=this.accountService.getLoggedUser();
+    console.log(this.payment);
   }
 
   pay(){
@@ -34,7 +35,7 @@ export class PaymentComponent extends Superclasse implements OnInit {
     this.myform.nativeElement.action = this.payment.urlNotify;
     this.myform.nativeElement.email.value = this.payment.email;
     this.myform.nativeElement.amount.value = this.payment.amount;
-    this.myform.nativeElement.transactionId.value = this.payment.transaction_id;
+    this.myform.nativeElement.transactionId.value = this.payment.transactionId;
     this.myform.nativeElement.customCode.value = this.payment.customCode;
     this.myform.nativeElement.urlSuccess.value = this.payment.urlSuccess;
     this.myform.nativeElement.urlUnDo.value = this.payment.urlUndo;

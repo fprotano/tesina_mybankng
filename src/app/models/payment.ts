@@ -6,7 +6,7 @@ export class Payment {
     amount: Number;
 	email: string;
 	customCode: string;
-	transaction_id: string;
+	transactionId: string;
 	urlUndo: string;
 	urlSuccess: string;
 	urlNotify: string;
