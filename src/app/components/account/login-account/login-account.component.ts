@@ -26,6 +26,7 @@ export class LoginAccountComponent extends Superclasse implements OnInit  {
     var _self = this;
     this.route.paramMap.subscribe(function(params){
       
+      
       var id =  params.get('id');
       console.log("id arrivato" + id);
       if(id!=null){

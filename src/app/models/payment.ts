@@ -8,5 +8,4 @@ export class Payment {
 	urlUndo: string;
 	urlSuccess: string;
 	urlNotify: string;
-
 }
