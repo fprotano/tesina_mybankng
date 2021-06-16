@@ -42,6 +42,7 @@ export class PaymentComponent extends Superclasse implements OnInit {
     this.myform.nativeElement.urlNotify.value = this.payment.urlNotify;
     console.log(this.payment);
    this.myform.nativeElement.submit();
+   this.router.navigate[("/home")];
   }
 
   callbackPaymnetOnFailure(data: any): any {
