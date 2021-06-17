@@ -20,6 +20,7 @@ export class PagamentoEseguitoComponent extends Superclasse implements OnInit {
 
   ngOnInit() {
     this.urlSuccess = window.localStorage.getItem("urlSuccess");
+    console.log(this.urlSuccess);
     window.localStorage.removeItem("payment");
   }
 
