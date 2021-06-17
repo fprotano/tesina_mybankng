@@ -18,6 +18,7 @@ export class PagamentoEseguitoComponent extends Superclasse implements OnInit {
  }
 
   ngOnInit() {
+    var urlSuccess = window.localStorage.getItem("urlSuccess");
     this.accountService.setPayment(this.payment);
   }
 

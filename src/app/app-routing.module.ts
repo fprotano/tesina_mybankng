@@ -8,6 +8,7 @@ import { ListFaqComponent } from './components/faq/list-faq/list-faq.component';
 import { VisualizzaInformazioniComponent } from './components/account/visualizza-informazioni/visualizza-informazioni.component';
 import { CambiaPasswordComponent } from './components/account/cambia-password/cambia-password.component';
 import { PaymentComponent } from './components/payment/payment.component';
+import { PagamentoEseguitoComponent } from './components/pagamento-eseguito/pagamento-eseguito.component';
 
 
 
@@ -22,6 +23,7 @@ const routes: Routes = [
 	, {path: "cambia-password",component:CambiaPasswordComponent }
 	, {path: "payment",component:PaymentComponent }
 	, {path: "init-payment/:id",component:LoginAccountComponent }
+	, {path: "pagamento-eseguito",component:PagamentoEseguitoComponent }
 	
 ];
 
