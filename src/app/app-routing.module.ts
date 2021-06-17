@@ -23,7 +23,7 @@ const routes: Routes = [
 	, {path: "cambia-password",component:CambiaPasswordComponent }
 	, {path: "payment",component:PaymentComponent }
 	, {path: "init-payment/:id",component:LoginAccountComponent }
-	, {path: "pagamento-eseguito",component:PagamentoEseguitoComponent }
+	, {path: "pagamentoeseguito",component:PagamentoEseguitoComponent }
 	
 ];
 

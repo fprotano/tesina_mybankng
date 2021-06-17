@@ -53,7 +53,8 @@ export class PaymentComponent extends Superclasse implements OnInit {
   }
   callbackPaymentDataSuccess(data: any): any {
     window.localStorage.setItem("urlSuccess", this.payment.urlSuccess)
-    this.router.navigate[("/pagamento-eseguito")];
+    console.log("AAAAAAAAAAAAAAAAAAAA " + data);
+    this.router.navigate(["/pagamentoeseguito"]);
   }
   callbackPaymentDataFailure(data: any): any {
     console.log(data);
