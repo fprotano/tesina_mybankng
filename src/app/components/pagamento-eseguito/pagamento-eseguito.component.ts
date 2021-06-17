@@ -12,13 +12,14 @@ import { Payment } from 'src/app/models/payment';
 })
 export class PagamentoEseguitoComponent extends Superclasse implements OnInit {
   payment: Payment = null;
+  urlSuccess: string = "";
   constructor(private staffservice:StaffService,router: Router, accountService: AccountService,private route: ActivatedRoute) {
   super(router, staffservice, accountService);
   
  }
 
   ngOnInit() {
-    var urlSuccess = window.localStorage.getItem("urlSuccess");
+    this.urlSuccess = window.localStorage.getItem("urlSuccess");
     this.accountService.setPayment(this.payment);
   }
 
