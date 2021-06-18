@@ -56,6 +56,7 @@ export class LoginAccountComponent extends Superclasse implements OnInit {
   loginSuccess(data: any) {
     if (data != undefined) {
       this.account = data;
+      
       var OTP = prompt("per favore inserisci l'otp");
       this.controlloOTP(OTP);
     }

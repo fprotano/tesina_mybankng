@@ -20,8 +20,11 @@ export class HomeComponent extends Superclasse implements OnInit {
 
   ngOnInit() {
     this.account = this.accountService.getLoggedUser();
+    console.log("AAAAAAAAAAAAAAAA" + JSON.stringify(this.account));
+    if(this.accountService.getPayment()!=null){
     this.payment = this.accountService.getPayment();
-
+    }
+    
     if (this.payment.email != null) {
       console.log(JSON.stringify(this.payment));
       this.router.navigate(["/payment"]);
