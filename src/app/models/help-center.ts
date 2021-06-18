@@ -1,12 +1,12 @@
 export class HelpCenter {
 
-	id: number;
+	id: Number;
 	createdAt: Date;
 	updatedAt: Date;
 	closedAt: Date;
-	fromAccountId: number;
-	question: string;
-	assignedToId: number;
+	fromAccountId: Number;
+	question: String;
+	assignedToId: Number;
 
 	// staff: Staff;
 	account: Account;

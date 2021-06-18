@@ -4,6 +4,7 @@ import { Superclasse } from 'src/superclasse';
 import { Router } from '@angular/router';
 import { AccountService } from 'src/app/services/account/account.service';
 import { StaffService } from 'src/app/services/staff/staff.service';
+import { HelpCenterService } from 'src/app/services/helpCenter/help-center.service';
 
 @Component({
   selector: 'app-visualizza-informazioni',
@@ -12,8 +13,8 @@ import { StaffService } from 'src/app/services/staff/staff.service';
 })
 export class VisualizzaInformazioniComponent extends Superclasse implements OnInit {
 
-  constructor(private staffservice:StaffService,router: Router, accountService: AccountService) {
-    super(router, staffservice, accountService);
+  constructor(private staffservice:StaffService,router: Router, accountService: AccountService, helpcenterservice: HelpCenterService) {
+    super(router, staffservice, accountService,helpcenterservice);
   }
 
   ngOnInit() {

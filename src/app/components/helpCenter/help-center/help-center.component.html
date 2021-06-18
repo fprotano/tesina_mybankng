@@ -3,28 +3,9 @@
 <br>
 <br> 
 <div align="center">
-	<p>Ciao {{account.name}}</p>
-	<table>
-		<thead>
-			<th>Domanda</th>
-			<th>Risposta</th>
-			<th>HelpCenter</th>
-			<th>Data Creazione</th>
-		</thead>
-		<tbody>
-			<tr *ngFor="let hero of threads">
-				<td>{{hero.question}}</td>
-				<td>{{hero.answer}}</td>
-				<td>{{hero.helpCenter.question}}</td>
-				<td>{{hero.createdAt}}</td>
-			</tr>
-		</tbody>
-	</table>
-   <p> <b> Domande fatte </b></p> <br/>
-	<li *ngFor="let helpcenter of helpcenters" > 
-	{{helpcenter.question}}</li>
+	<p>Ciao {{account.name}}, hai bisogno di aiuto?</p>
 
-	<label>Inserisci una domanda:</label> <br>
+	<label>Descrivi il tuo problema e un operatore ti rispondera' il prima possibile  </label> <br>
 	<textarea name="question" [(ngModel)]="helpCenter.question" rows="2" cols="40"></textarea> <br>
 	<input type="button" (click)="Insert()" value="INVIA" class="btn btn-outline-success">
 </div>

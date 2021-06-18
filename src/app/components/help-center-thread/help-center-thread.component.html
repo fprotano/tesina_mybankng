@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+	<title>HelpCenterPage</title>
+</head>
+
+<body>
+	<div class="container content">
+		<div class="row">
+
+			<div class="col-md-6 offset-3">
+				<div class="card">
+					<div class="card-header">Problema principale: {{helpCenter.question}}</div>
+					<div style="overflow:auto;width: 540px; height: 340px;">
+						<form *ngFor="let hcthread of helpCenterThreads">
+							<div class="card-body height3">
+								<ul class="catch-list">
+									<li class="in">
+										<div class="chat-body"><br>
+											<div class="chat-messageU">
+												<h5>{{account.name}}</h5>
+												<p>{{hcthread.question}}</p>
+											</div>
+										</div>
+										<div class="chat-img">
+											<img alt="Avtar"
+												src="data:image/jpeg;base64,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">
+										</div>
+									</li>
+									<div *ngIf="hcthread.answer != null">
+										<li class="out">
+											<div class="chat-img">
+												<img alt="Avtar"
+													src="https://th.bing.com/th/id/OIP.ZZMyPzqrbwplfYUY_KYuiwD6D6?w=219&h=219&c=7&o=5&pid=1.7">
+											</div>
+											<div class="chat-body"><br>
+												<div class="chat-message">
+													<h5>Operatore</h5>
+													<p>{{hcthread.answer}}</p>
+												</div>
+											</div>
+										</li>
+									</div>
+
+								</ul>
+
+							</div>
+						</form>
+					</div>
+						<form #question="ngForm" (submit)="Insert(question)">
+							<div class="message">
+								<input type="text" class ="text" placeholder="Scrivi un messaggio" name="question"
+									[(ngModel)]="helpCenterThread.question">
+								<button type="submit" class="button" >INVIA
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+			crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

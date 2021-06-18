@@ -19,16 +19,15 @@ export class HelpCenterComponent extends Superclasse implements OnInit {
 	threads: Array<HelpCenterThread> = new Array();
 	helpcenters: HelpCenter[] = new Array<HelpCenter>();
 
-	constructor(private staffservice: StaffService, router: Router, accountService: AccountService, protected helpcenterservice: HelpCenterService) {
-		super(router, staffservice, accountService);
+	constructor(private staffservice: StaffService, router: Router, accountService: AccountService, helpCenterService: HelpCenterService) {
+		super(router, staffservice, accountService, helpCenterService);
 	}
 
 	ngOnInit() {
-		this.helpcenterservice.findThreads(this.account.id, this.findSuccess.bind(this), this.findFailure.bind(this));
+		this.helpCenterService.findThreads(this.account.id, this.findSuccess.bind(this), this.findFailure.bind(this));
 		this.account = this.accountService.getLoggedUser();
 		this.findAccountId();
 	}
-
 
 
 	findSuccess(data: any) {
@@ -42,11 +41,13 @@ export class HelpCenterComponent extends Superclasse implements OnInit {
 	}
 
 	Insert() {
-		this.helpcenterservice.insert(this.helpCenter, this.submitSuccess.bind(this), this.submitFailure.bind(this), this.account.id);
+		this.helpCenterService.insert(this.helpCenter, this.submitSuccess.bind(this), this.submitFailure.bind(this), this.account.id);
 	}
 
 	submitSuccess(data: any) {
 		this.helpCenter = data;
+		this.helpCenterService.setHelpCenter(this.helpCenter);
+		this.router.navigate(["/helpCenterThread"]);
 	}
 
 	submitFailure(err: String, err_code: String) {
@@ -54,7 +55,7 @@ export class HelpCenterComponent extends Superclasse implements OnInit {
 	}
 
 	findAccountId() {
-		this.helpcenterservice.findAccountId(this.success.bind(this), this.failure.bind(this), this.account.id);
+		this.helpCenterService.findAccountId(this.success.bind(this), this.failure.bind(this), this.account.id);
 	}
 
 	success(data: any) {

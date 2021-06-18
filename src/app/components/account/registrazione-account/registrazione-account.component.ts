@@ -5,6 +5,7 @@ import { Account } from 'src/app/models/account';
 import { AccountService } from 'src/app/services/account/account.service';
 import { StaffService } from 'src/app/services/staff/staff.service';
 import { Superclasse } from 'src/superclasse';
+import { HelpCenterService } from 'src/app/services/helpCenter/help-center.service';
 
 @Component({
 	selector: 'app-registrazione-account',
@@ -14,8 +15,8 @@ import { Superclasse } from 'src/superclasse';
 export class RegistrazioneAccountComponent extends Superclasse implements OnInit {
 
 
-	constructor(private staffservice:StaffService,router: Router, accountService: AccountService,) {
-	super(router, staffservice, accountService);
+	constructor(private staffservice:StaffService,router: Router, accountService: AccountService, helpCenterService: HelpCenterService) {
+	super(router, staffservice, accountService, helpCenterService);
  }
 
 	ngOnInit() {

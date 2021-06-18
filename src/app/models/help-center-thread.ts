@@ -2,11 +2,11 @@ import { HelpCenter } from './help-center';
 
 export class HelpCenterThread {
 	
-	id: number;
+	id: Number;
 	createdAt: Date;
-	helpCenterId: number;
-	question: string;
-	answer: string;
+	helpCenterId: Number;
+	question: String;
+	answer: String;
 	
 	helpCenter: HelpCenter;
 }
