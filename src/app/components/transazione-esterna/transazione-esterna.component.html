@@ -1,0 +1,38 @@
+<fieldset>
+	<legend>Inserisci i dati per una transazione esterna:</legend>
+	<table>
+	<thead>
+		<th>Mittente:</th>
+		<th>Nome</th>
+		<th>Cognome</th>
+		<th>Carta</th>
+		<th>CIN</th>
+		<th>Scadenza</th>/
+		<th>Importo</th>
+		<th>Email Destinatario</th>
+		<th>Codice Relativo</th>
+	</thead>
+	<tbody>
+		<th></th>
+		<th>Nome</th>
+		<th>Cognome</th>
+		<th>Carta</th>
+		<th>CIN</th>
+		<th>Scadenza</th>/
+		<th>{{payment.amount}}</th>
+		<th>{{accountRicevente.email}}</th>
+		<th>{{payment.customCode}}</th>
+	</tbody>
+	</table>
+	<button type="submit" (click)="externalPay()">Paga Ordine</button><br>
+</fieldset>
+
+	<form #transazioneEsternaForm id="transazioneEsternaForm" method="post" action="{{payment.urlNotify}}">
+		<input type="hidden" name="email">
+		<input type="hidden" name="amount">
+		<input type="hidden" name="transactionId">
+		<input type="hidden" name="customCode">
+		<input type="hidden" name="urlSuccess">
+		<input type="hidden" name="urlUnDo">
+		<input type="hidden" name="urlNotify">
+	</form>

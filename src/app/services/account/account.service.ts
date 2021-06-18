@@ -11,7 +11,11 @@ export class AccountService extends ApiService {
 
 	constructor(http: HttpClient) {
 		super(http);
-	}
+  }
+
+  findAccountByEmail(email:string,callbackOnSuccess,callbackOnFailure){
+    this.doPost("account/findByEmail",email,callbackOnSuccess,callbackOnFailure);
+  }
 
 	registrazione(model: Account, callbackOnSuccess: any, callbackOnFailure: any) {
 		 this.doPost("account/registrazione",model,callbackOnSuccess,callbackOnFailure);

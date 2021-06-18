@@ -14,4 +14,5 @@ export class ExternalTransactionService extends ApiService {
   findTransactions(id:number,callbackOnSuccess,callbackOnFailure){
     this.doPost("externalTransaction/findAllByStaffId",id,callbackOnSuccess,callbackOnFailure);
   }
+  
 }
