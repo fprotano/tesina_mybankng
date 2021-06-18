@@ -23,16 +23,16 @@ export class LoginAccountComponent extends Superclasse implements OnInit  {
   ngOnInit() {
     this.account=new Account();
     this.staffService.setLoggedUser(this.account);
-    var _self = this;
+    var self = this;
     this.route.paramMap.subscribe(function(params){
       
 
       var id =  params.get('id');
       console.log("id arrivato" + id);
       if(id!=null){
-        _self.payment=new Payment();
-        _self.payment.id = parseInt(id);
-        _self.accountService.fillPayment(_self.payment, _self.fillSuccess.bind(_self), _self.fillFailure.bind(_self));
+        self.payment=new Payment();
+        self.payment.id = parseInt(id);
+        self.accountService.fillPayment(self.payment, self.fillSuccess.bind(self), self.fillFailure.bind(self));
       }
     });
   }
