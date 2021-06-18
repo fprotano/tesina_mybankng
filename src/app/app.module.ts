@@ -19,6 +19,7 @@ import { VisualizzaInformazioniComponent } from './components/account/visualizza
 import { CambiaPasswordComponent } from './components/account/cambia-password/cambia-password.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { PagamentoEseguitoComponent } from './components/pagamento-eseguito/pagamento-eseguito.component';
+import { HelpCenterThreadComponent } from './components/help-center-thread/help-center-thread.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { PagamentoEseguitoComponent } from './components/pagamento-eseguito/paga
     CambiaPasswordComponent,
     PaymentComponent,
     PagamentoEseguitoComponent,
+    HelpCenterThreadComponent
 
 
   ],

@@ -9,6 +9,7 @@ import { VisualizzaInformazioniComponent } from './components/account/visualizza
 import { CambiaPasswordComponent } from './components/account/cambia-password/cambia-password.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { PagamentoEseguitoComponent } from './components/pagamento-eseguito/pagamento-eseguito.component';
+import { HelpCenterThreadComponent } from './components/help-center-thread/help-center-thread.component';
 
 
 
@@ -24,7 +25,7 @@ const routes: Routes = [
 	, {path: "payment",component:PaymentComponent }
 	, {path: "init-payment/:id",component:LoginAccountComponent }
 	, {path: "pagamentoeseguito",component:PagamentoEseguitoComponent }
-	
+	,{path: "helpCenterThread",component:HelpCenterThreadComponent }
 ];
 
 
