@@ -10,7 +10,7 @@ import { CambiaPasswordComponent } from './components/account/cambia-password/ca
 import { PaymentComponent } from './components/payment/payment.component';
 import { PagamentoEseguitoComponent } from './components/pagamento-eseguito/pagamento-eseguito.component';
 import { HelpCenterThreadComponent } from './components/help-center-thread/help-center-thread.component';
-
+import { TransazioneEsternaComponent } from './components/transazione-esterna/transazione-esterna.component';
 
 
 const routes: Routes = [
@@ -25,7 +25,8 @@ const routes: Routes = [
 	, {path: "payment",component:PaymentComponent }
 	, {path: "init-payment/:id",component:LoginAccountComponent }
 	, {path: "pagamentoeseguito",component:PagamentoEseguitoComponent }
-	,{path: "helpCenterThread",component:HelpCenterThreadComponent }
+	, {path: "helpCenterThread",component:HelpCenterThreadComponent }
+	, {path: "external-transaction", component:TransazioneEsternaComponent }
 ];
 
 
