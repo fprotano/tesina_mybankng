@@ -50,7 +50,7 @@ export class PaymentComponent extends Superclasse implements OnInit {
   }
 
   callbackPaymnetOnFailure(data: any): any {
-    console.log(data);
+    alert(data);
   }
   callbackPaymentDataSuccess(data: any): any {
     window.localStorage.setItem("urlSuccess", this.payment.urlSuccess)
