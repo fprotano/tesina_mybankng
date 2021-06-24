@@ -58,7 +58,7 @@ export class PaymentComponent extends Superclasse implements OnInit {
     this.router.navigate(["/pagamentoeseguito"]);
   }
   callbackPaymentDataFailure(data: any): any {
-    console.log(data);
+    alert(data);
   }
 
 }
