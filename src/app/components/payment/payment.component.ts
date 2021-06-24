@@ -27,6 +27,10 @@ export class PaymentComponent extends Superclasse implements OnInit {
   pay(){
     this.accountService.pay(this.payment, this.callbackPaymnetOnSuccess.bind(this), this.callbackPaymnetOnFailure.bind(this));
   }
+  undo(){
+    window.localStorage.removeItem("payment");
+    this.router.navigate(["/home"]);
+  }
 
   callbackPaymnetOnSuccess(data: any): void {
 
