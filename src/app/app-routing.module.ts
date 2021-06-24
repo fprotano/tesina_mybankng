@@ -20,13 +20,13 @@ const routes: Routes = [
 	, { path: "home", component: HomeComponent }
 	, { path: "help-center", component: HelpCenterComponent }
 	, { path: "list-faq", component: ListFaqComponent }
-	, {path: "Inf-personali-account", component:  VisualizzaInformazioniComponent}
-	, {path: "cambia-password",component:CambiaPasswordComponent }
-	, {path: "payment",component:PaymentComponent }
-	, {path: "init-payment/:id",component:LoginAccountComponent }
-	, {path: "pagamentoeseguito",component:PagamentoEseguitoComponent }
-	, {path: "helpCenterThread",component:HelpCenterThreadComponent }
-	, {path: "external-transaction", component:TransazioneEsternaComponent }
+	, { path: "Inf-personali-account", component:  VisualizzaInformazioniComponent}
+	, { path: "cambia-password",component:CambiaPasswordComponent }
+	, { path: "payment",component:PaymentComponent }
+	, { path: "init-payment/:id",component:LoginAccountComponent }
+	, { path: "pagamentoeseguito",component:PagamentoEseguitoComponent }
+	, { path: "helpCenterThread",component:HelpCenterThreadComponent }
+	, { path: "transazione-esterna", component:TransazioneEsternaComponent }
 ];
 
 
