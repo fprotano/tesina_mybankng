@@ -20,7 +20,7 @@
 			      
             
              <li>
-             <a href="#">Logout</a>
+             <a (click)="logout()">Logout</a>
             </li>
             
             <li> 
@@ -66,11 +66,11 @@
 			      
             
             
-            <li *ngIf="account==null">
+            <li>
              <a routerLink="/registrazione-account">Registrazione</a>
             </li>
 
-            <li *ngIf="account==null">
+            <li>
              <a routerLink="/login-account">Login</a>
             </li>
 

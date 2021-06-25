@@ -23,6 +23,10 @@ export class HomeComponent extends Superclasse implements OnInit {
     console.log("AAAAAAAAAAAAAAAA" + JSON.stringify(this.account));
     if(this.accountService.getPayment()!=null){
     this.payment = this.accountService.getPayment();
+    if(!this.flag){
+      this.flag=true;
+      window.location.reload();
+    }
     }
     
     if (this.payment.email != null) {
