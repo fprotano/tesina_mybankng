@@ -14,7 +14,7 @@ import { HelpCenterService } from 'src/app/services/helpCenter/help-center.servi
 })
 export class RegistrazioneAccountComponent extends Superclasse implements OnInit {
 
-
+	flag: string = "true";
 	constructor(private staffservice:StaffService,router: Router, accountService: AccountService, helpCenterService: HelpCenterService) {
 	super(router, staffservice, accountService, helpCenterService);
  }
@@ -31,6 +31,7 @@ export class RegistrazioneAccountComponent extends Superclasse implements OnInit
 	submitSuccess(data: any) {
 		this.accountRegistrato= data;
 		this.accountService.setLoggedUser(this.accountRegistrato);
+		window.localStorage.setItem("flag", this.flag);
 		this.router.navigate(["/home"]);
 	}
 

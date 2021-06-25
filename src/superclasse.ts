@@ -11,7 +11,7 @@ import { HelpCenterService } from './app/services/helpCenter/help-center.service
 export class Superclasse {
 
 
-  flag: Boolean = false;
+  
   staffRegistrato: Staff = new Staff();
   staff: Staff = new Staff();
   logged: boolean = true;
@@ -27,8 +27,9 @@ export class Superclasse {
 
   }
   logout(): void {
-    this.flag=false;
+    
     window.localStorage.clear();
+    window.location.reload();
     this.router.navigate(['/login-account']);
 
   }

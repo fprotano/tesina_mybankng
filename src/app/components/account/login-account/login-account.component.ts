@@ -14,7 +14,7 @@ import { HelpCenterService } from 'src/app/services/helpCenter/help-center.servi
 })
 export class LoginAccountComponent extends Superclasse implements OnInit {
 
-
+  flag: string = "true";
   payment: Payment = new Payment();
   constructor(private staffservice: StaffService, router: Router, accountService: AccountService,
     helpcenterservice: HelpCenterService, private route: ActivatedRoute) {
@@ -74,6 +74,7 @@ export class LoginAccountComponent extends Superclasse implements OnInit {
     this.accountService.setLoggedUser(this.account);
     this.account = data;
     console.log(this.logged);
+    window.localStorage.setItem("flag", this.flag);
     this.router.navigate(["/home"]);
 
   }
