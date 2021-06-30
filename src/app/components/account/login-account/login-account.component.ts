@@ -75,7 +75,7 @@ export class LoginAccountComponent extends Superclasse implements OnInit {
     this.account = data;
     console.log(this.logged);
     window.localStorage.setItem("flag", this.flag);
-    this.router.navigate(["/home"]);
+    window.location.replace('/home');
 
   }
 
