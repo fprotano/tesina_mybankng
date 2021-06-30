@@ -23,34 +23,31 @@ export class PaymentComponent extends Superclasse implements OnInit {
     this.payment.account=this.accountService.getLoggedUser();
     console.log(this.payment);
   }
-
+  
   pay(){
+    this.accountService.fillPaymentWithTransactionId(this.payment, this.callbackSuccess.bind(this), this.callbackFailure.bind(this));
+
+  }
+  callbackSuccess(data:any){
+    this.payment=data;
+    this.paySend();
+  }
+  callbackFailure(data:any){
+    alert(data);
+  }
+  
+  paySend(){
     this.accountService.pay(this.payment, this.callbackPaymnetOnSuccess.bind(this), this.callbackPaymnetOnFailure.bind(this));
   }
   undo(){
+    this.paySend();
     window.localStorage.removeItem("payment");
-    this.router.navigate(["/home"]);
+    
   }
 
   callbackPaymnetOnSuccess(data: any): void {
 
-
-
     this.accountService.sendPaymentData(this.payment, this.callbackPaymentDataSuccess.bind(this), this.callbackPaymentDataFailure.bind(this));
-  //   console.log('nel callbackPaymnetOnSuccess del makePayment > ' + JSON.stringify(data));
-  //   this.payment = data;
-
-  //   this.myform.nativeElement.action = this.payment.urlNotify;
-  //   this.myform.nativeElement.email.value = this.payment.email;
-  //   this.myform.nativeElement.amount.value = this.payment.amount;
-  //   this.myform.nativeElement.transactionId.value = this.payment.transactionId;
-  //   this.myform.nativeElement.customCode.value = this.payment.customCode;
-  //   this.myform.nativeElement.urlSuccess.value = this.payment.urlSuccess;
-  //   this.myform.nativeElement.urlUnDo.value = this.payment.urlUndo;
-  //   this.myform.nativeElement.urlNotify.value = this.payment.urlNotify;
-  //   console.log(this.payment);
-  //  this.myform.nativeElement.submit();
-  //  this.router.navigate[("/home")];
   }
 
   callbackPaymnetOnFailure(data: any): any {
@@ -58,7 +55,6 @@ export class PaymentComponent extends Superclasse implements OnInit {
   }
   callbackPaymentDataSuccess(data: any): any {
     window.localStorage.setItem("urlSuccess", this.payment.urlSuccess)
-    console.log("AAAAAAAAAAAAAAAAAAAA " + data);
     this.router.navigate(["/pagamentoeseguito"]);
   }
   callbackPaymentDataFailure(data: any): any {

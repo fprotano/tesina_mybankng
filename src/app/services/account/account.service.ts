@@ -38,6 +38,9 @@ export class AccountService extends ApiService {
   fillPayment(model: Payment, callbackOnSuccess,callbackOnFailure){
     this.doPost("payment/fillPayment",model,callbackOnSuccess,callbackOnFailure);
   }
+  fillPaymentWithTransactionId(model: Payment, callbackOnSuccess, callbackOnFailure){
+    this.doPost("payment/fillPaymentWithTransactionId",model,callbackOnSuccess,callbackOnFailure);
+  }
 
  setLoggedUser(value: any) {
       if (value != undefined) {
