@@ -1,11 +1,11 @@
 <!-- Button trigger modal -->
 <br><br><br><br><br><br>
 <div align="center">
-	<h1>Benvenuto</h1>
+	<h1 id="titolo">Benvenuto</h1>
 	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
 		Login
 	</button>
-	
+
 </div>
 
 <!-- Modal -->
@@ -19,8 +19,8 @@
 					<form>
 						<div class="form-group">
 							<label for="exampleInputEmail1">E-mail </label>
-							<input type="email" [(ngModel)]="account.email" name="email" class="form-control" id="exampleInputEmail1"
-								aria-describedby="emailHelp" placeholder="E-mail">
+							<input type="email" [(ngModel)]="account.email" name="email" class="form-control"
+								id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail">
 						</div>
 						<div class="form-group">
 							<label for="exampleInputPassword1">Password</label>
@@ -50,8 +50,10 @@
 				</div>
 				<div class="column" id="secondary">
 					<div class="sec-content">
-						<h2>Non sei ancora registrato?</h2> 
-						<button type="button" class="btn btn-primary">Registrati</button>
+						<h2>Non sei ancora registrato?</h2>
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+							Registrazione
+						</button>
 					</div>
 				</div>
 			</div>
