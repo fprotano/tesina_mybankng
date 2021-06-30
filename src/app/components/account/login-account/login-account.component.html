@@ -1,33 +1,61 @@
-
-<div align="center"> 
-<br/><br/><br/>
-<h1>Login Account</h1>
-<hr/>
-
-<label>Email</label><br>
-<input type="text" [(ngModel)]="account.email">
-<br>
-<label>Password</label><br>
-<input type="password" [(ngModel)]="account.password"  >
-
-
-<br>
-<br>
-<input type="button" (click)="doLoginAccount()" value="Accedi" class="btn btn-outline-success">
-
-<hr/>
-<br>
-<a routerLink="/cambia-password">Hai dimenticato la password</a>
-<br>
-<a routerLink="/registrazione-account">Registrati</a>
-
-<div *ngIf="payment.email!=null">
-<br/>
-<a routerLink="/transazione-esterna">Esegui una transazione Esterna</a>
+<!-- Button trigger modal -->
+<br><br><br><br><br><br>
+<div align="center">
+	<h1>Benvenuto</h1>
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+		Login
+	</button>
+	
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="column" id="main">
+					<h1>Login </h1>
+					<form>
+						<div class="form-group">
+							<label for="exampleInputEmail1">E-mail </label>
+							<input type="email" [(ngModel)]="account.email" name="email" class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="E-mail">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Password</label>
+							<input type="password" [(ngModel)]="account.password" name="password" class="form-control"
+								id="exampleInputPassword1" placeholder="Password">
+						</div>
+						<input type="button" (click)="doLoginAccount()" value="Accedi" class="btn btn-primary">
+
+						<div *ngIf="payment.email!=null">
+							<br />
+							<a routerLink="/transazione-esterna">Esegui una transazione Esterna</a>
+						</div>
+					</form>
+				</div>
+				<div>
+					<svg width="67px" height="578px" viewBox="0 -3 64 578" version="1.1"
+						xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+						<title>Path</title>
+						<desc>Created with Sketch.</desc>
+						<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<path
+								d="M11.3847656,-5.68434189e-14 C-7.44726562,36.7213542 5.14322917,126.757812 49.15625,270.109375 C70.9827986,341.199016 54.8877465,443.829224 0.87109375,578 L67,578 L67,-5.68434189e-14 L11.3847656,-5.68434189e-14 Z"
+								id="Path" fill="#007eff"></path>
+						</g>
+					</svg>
+				</div>
+				<div class="column" id="secondary">
+					<div class="sec-content">
+						<h2>Non sei ancora registrato?</h2> 
+						<button type="button" class="btn btn-primary">Registrati</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-
-
-
-
+<app-registrazione-account></app-registrazione-account>
