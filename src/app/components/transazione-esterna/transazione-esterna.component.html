@@ -1,4 +1,4 @@
-<fieldset>
+<fieldset> 
 	<legend>Inserisci i dati per una transazione esterna:</legend>
 	<table>
 	<thead>
@@ -13,15 +13,15 @@
 		<th>Codice Relativo</th>
 	</thead>
 	<tbody>
-		<th></th>
-		<th>Nome</th>
-		<th>Cognome</th>
-		<th>Carta</th>
-		<th>CIN</th>
-		<th>Scadenza</th>/
-		<th>{{payment.amount}}</th>
-		<th>{{accountRicevente.email}}</th>
-		<th>{{payment.customCode}}</th>
+		<tr>
+			<td></td>
+			<td></td>
+			
+			<td>{{payment.amount}}</td>
+			<td>{{payment.email}}</td>
+			<td>{{payment.customCode}}</td>
+			<td>{{payment.transactionId}}</td>
+		</tr>
 	</tbody>
 	</table>
 	<button type="submit" (click)="externalPay()">Paga Ordine</button><br>
