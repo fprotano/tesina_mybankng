@@ -29,8 +29,7 @@ export class Superclasse {
   logout(): void {
     
     window.localStorage.clear();
-    window.location.reload();
-    this.router.navigate(['/login-account']);
+    window.location.replace('/login-account');
 
   }
 
