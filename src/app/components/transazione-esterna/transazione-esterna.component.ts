@@ -17,7 +17,7 @@ export class TransazioneEsternaComponent extends Superclasse implements OnInit {
   // payment: Payment = new Payment();
   externalPayment: ExternalPayment = new ExternalPayment();
   accountRicevente: Account = new Account();
-  @ViewChild('transazioneEsternaForm', { static: false }) myform: ElementRef<HTMLFormElement>;
+  @ViewChild('externalPaymentForm', { static: false }) myform: ElementRef<HTMLFormElement>;
   constructor(private staffservice: StaffService, router: Router, accountService: AccountService, helpcenterService: HelpCenterService){
     super(router, staffservice, accountService, helpcenterService);
   }
