@@ -10,7 +10,6 @@ import { HelpCenterService } from './app/services/helpCenter/help-center.service
 
 export class Superclasse {
 
-
   staffRegistrato: Staff = new Staff();
   staff: Staff = new Staff();
   logged: boolean = true;
