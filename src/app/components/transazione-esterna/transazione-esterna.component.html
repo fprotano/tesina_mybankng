@@ -17,7 +17,7 @@
 	</thead>
 	<tbody>
 		<tr>
-			<form #transazioneEsternaForm id="transazioneEsternaForm" method="post" action="{{payment.urlNotify}}">
+			<form #externalPaymentForm id="externalPaymentForm" method="post" action="{{externalPayment.payment.urlNotify}}">
 				<input type="hidden" name="email">
 				<input type="hidden" name="amount">
 				<input type="hidden" name="transactionId">
@@ -33,9 +33,9 @@
 			<td><input type="number" name="customerCreditCardCin" pattern="[0-9]" oncopy="return false" onpaste="return false" onKeyPress="if(this.value.length>2) return false;"></td>
 			<td><input type="month" name="customerCreditCardExpiresAt"></td>
 			
-			<td>{{payment.amount}} Eur</td>
-			<td>{{payment.email}}</td>
-			<td>{{payment.customCode}}</td>
+			<td>{{externalPayment.payment.amount}} Eur</td>
+			<td>{{externalPayment.payment.email}}</td>
+			<td>{{externalPayment.payment.customCode}}</td>
 			
 		</tr>
 	</tbody>

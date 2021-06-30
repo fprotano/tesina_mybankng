@@ -14,7 +14,7 @@ import { Account } from 'src/app/models/account';
   styleUrls: ['./transazione-esterna.component.css']
 })
 export class TransazioneEsternaComponent extends Superclasse implements OnInit {
-  payment: Payment = new Payment();
+  // payment: Payment = new Payment();
   externalPayment: ExternalPayment = new ExternalPayment();
   accountRicevente: Account = new Account();
   @ViewChild('transazioneEsternaForm', { static: false }) myform: ElementRef<HTMLFormElement>;
