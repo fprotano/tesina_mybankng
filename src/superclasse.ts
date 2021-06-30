@@ -28,7 +28,6 @@ export class Superclasse {
     
     window.localStorage.clear();
     window.location.replace('/login-account');
-
   }
 
   logoutStaff(): void {
