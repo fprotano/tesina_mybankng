@@ -4,6 +4,7 @@ import { AccountService } from 'src/app/services/account/account.service';
 import { StaffService } from 'src/app/services/staff/staff.service';
 import { HelpCenterService } from 'src/app/services/helpCenter/help-center.service';
 import { Superclasse } from 'src/superclasse';
+import { ExternalPayment } from 'src/app/models/external-payment';
 import { Payment } from 'src/app/models/payment';
 import { Account } from 'src/app/models/account';
 
@@ -14,6 +15,7 @@ import { Account } from 'src/app/models/account';
 })
 export class TransazioneEsternaComponent extends Superclasse implements OnInit {
   payment: Payment = new Payment();
+  externalPayment: ExternalPayment = new ExternalPayment();
   accountRicevente: Account = new Account();
   @ViewChild('transazioneEsternaForm', { static: false }) myform: ElementRef<HTMLFormElement>;
   constructor(private staffservice: StaffService, router: Router, accountService: AccountService, helpcenterService: HelpCenterService){
@@ -21,26 +23,28 @@ export class TransazioneEsternaComponent extends Superclasse implements OnInit {
   }
 
   ngOnInit() {
-    this.payment = this.accountService.getPayment();
-    this.accountService.findAccountByEmail(this.payment.email, this.callbackFindOnSuccess.bind(this), this.callbackFindOnFailure.bind(this));
-    // this.payment.account = this.accountService.getLoggedUser();
-    // console.log(this.payment);
+    this.externalPayment.payment = this.accountService.getPayment();
+    console.log(this.externalPayment.payment);
+    this.accountService.findAccountByEmail(this.externalPayment.payment.email, this.callbackFindOnSuccess.bind(this), this.callbackFindOnFailure.bind(this));
+    
   }
 
   externalPay() {
-    this.accountService.pay(this.payment, this.callbackPaymnetOnSuccess.bind(this), this.callbackPaymnetOnFailure.bind(this));
+
+    console.log(this.externalPayment);
+    this.accountService.externalPay(this.externalPayment, this.callbackPaymnetOnSuccess.bind(this), this.callbackPaymnetOnFailure.bind(this));
   }
 
   // intoccabile
   callbackPaymnetOnSuccess(data: any): void {
-    this.accountService.sendPaymentData(this.payment, this.callbackPaymentDataSuccess.bind(this), this.callbackPaymentDataFailure.bind(this));
+    this.accountService.sendPaymentData(this.externalPayment.payment, this.callbackPaymentDataSuccess.bind(this), this.callbackPaymentDataFailure.bind(this));
   }
 
   callbackPaymnetOnFailure(data: any): any {
     console.log(data);
   }
   callbackPaymentDataSuccess(data: any): any {
-    window.localStorage.setItem("urlSuccess", this.payment.urlSuccess)
+    window.localStorage.setItem("urlSuccess", this.externalPayment.payment.urlSuccess)
     console.log("transazioneEsterna::: " + data);
     this.router.navigate(["/pagamentoeseguito"]);
   }

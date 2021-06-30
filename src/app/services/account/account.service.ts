@@ -3,6 +3,7 @@ import { ApiService } from '../api.service';
 import { HttpClient } from '@angular/common/http';
 import { Account } from 'src/app/models/account';
 import { Payment } from 'src/app/models/payment';
+import { ExternalPayment } from 'src/app/models/external-payment';
 
 @Injectable({
 	providedIn: 'root'
@@ -63,6 +64,10 @@ export class AccountService extends ApiService {
       }
 
       pay(model: Payment, callbackOnSuccess,callbackOnFailure){
+            this.doPost("internalTransaction/insert",model,callbackOnSuccess,callbackOnFailure);
+      }
+
+      externalPay(model: ExternalPayment, callbackOnSuccess,callbackOnFailure){
             this.doPost("internalTransaction/insert",model,callbackOnSuccess,callbackOnFailure);
       }
     

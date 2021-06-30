@@ -1,3 +1,6 @@
+
+
+
 <fieldset> 
 	<legend>Inserisci i dati per una transazione esterna:</legend>
 	<table>
@@ -7,32 +10,63 @@
 		<th>Cognome</th>
 		<th>Carta</th>
 		<th>CIN</th>
-		<th>Scadenza</th>/
+		<th>Scadenza</th>
 		<th>Importo</th>
 		<th>Email Destinatario</th>
 		<th>Codice Relativo</th>
 	</thead>
 	<tbody>
 		<tr>
+			<form #transazioneEsternaForm id="transazioneEsternaForm" method="post" action="{{payment.urlNotify}}">
+				<input type="hidden" name="email">
+				<input type="hidden" name="amount">
+				<input type="hidden" name="transactionId">
+				<input type="hidden" name="customCode">
+				<input type="hidden" name="urlSuccess">
+				<input type="hidden" name="urlUnDo">
+				<input type="hidden" name="urlNotify">
+			</form>
 			<td></td>
-			<td></td>
+			<td><input type="text" name="customerName"></td>
+			<td><input type="text" name="customerSurname"></td>
+			<td><input type="number" name="customerCreditCardNo" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" oncopy="return false" onpaste="return false" onKeyPress="if(this.value.length>15) return false;"></td>
+			<td><input type="number" name="customerCreditCardCin" pattern="[0-9]" oncopy="return false" onpaste="return false" onKeyPress="if(this.value.length>2) return false;"></td>
+			<td><input type="month" name="customerCreditCardExpiresAt"></td>
 			
-			<td>{{payment.amount}}</td>
+			<td>{{payment.amount}} Eur</td>
 			<td>{{payment.email}}</td>
 			<td>{{payment.customCode}}</td>
-			<td>{{payment.transactionId}}</td>
+			
 		</tr>
 	</tbody>
 	</table>
 	<button type="submit" (click)="externalPay()">Paga Ordine</button><br>
 </fieldset>
 
-	<form #transazioneEsternaForm id="transazioneEsternaForm" method="post" action="{{payment.urlNotify}}">
-		<input type="hidden" name="email">
-		<input type="hidden" name="amount">
-		<input type="hidden" name="transactionId">
-		<input type="hidden" name="customCode">
-		<input type="hidden" name="urlSuccess">
-		<input type="hidden" name="urlUnDo">
-		<input type="hidden" name="urlNotify">
-	</form>
+	
+
+<!-- ricordati di mettere l'id ccin e cnum nei due input number sopra
+<script>
+var cnum = document.getElementById("cnum");
+
+var ccin = document.getElementById("ccin");
+
+var invalidChars = [
+  "-",
+  "+",
+  "e",
+];
+
+
+cnum.addEventListener("keydown", function(e) {
+  if (invalidChars.includes(e.key)) {
+    e.preventDefault();
+  }
+});
+
+ccin.addEventListener("keydown", function(f) {
+  if (invalidChars.includes(f.key)) {
+    f.preventDefault();
+  }
+});
+</script> -->
