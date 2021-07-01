@@ -19,7 +19,7 @@
 
 			<div class="col-md-6 offset-3">
 				<div class="card">
-					<div class="card-header">Problema principale: {{helpCenter.question}}</div>
+					<div class="card-header">Problema principale: <b> {{helpCenter.question}} </b></div>
 					<div style="overflow:auto;width: 540px; height: 340px;">
 						<form *ngFor="let hcthread of helpCenterThreads">
 							<div class="card-body height3">
@@ -58,7 +58,7 @@
 					</div>
 						<form #question="ngForm" (submit)="Insert(question)">
 							<div class="message">
-								<input type="text" class ="text" placeholder="Scrivi un messaggio" name="question"
+								<input type="text" class ="text" placeholder="Scrivi un messaggio.." name="question"
 									[(ngModel)]="helpCenterThread.question">
 								<button type="submit" class="button" >INVIA
 								</button>

@@ -79,7 +79,7 @@ body{
 	overflow: auto;
 	color: black;
 	font-size: medium ;
-	width: 400px;
+	width: 450px;
 }
 
 ::placeholder{
@@ -100,6 +100,10 @@ body{
 .button:hover{
 	background-color: #1F1D86;
 	color: white;
+}
+
+.card{
+	width: 550px;
 }
 
 

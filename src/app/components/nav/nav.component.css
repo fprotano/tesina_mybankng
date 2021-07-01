@@ -1,0 +1,64 @@
+#container {
+  background-color: #170088;
+}
+
+#home {
+  background: #110066;
+}
+
+#container a:hover {
+  color: white;
+}
+
+#container a {
+  float: left;
+  color: #c2c5ed;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#titolo {
+  color: white;
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+#row {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+#navbar-header {
+  text-align: center;
+  height: 52px;
+}
+
+#logout a {
+  color: white;
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ 
+}
+
+#logout a:hover {
+  color: white;
+}
+
+a#logout{
+	background: transparent;
+}
