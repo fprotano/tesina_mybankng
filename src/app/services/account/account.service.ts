@@ -71,7 +71,7 @@ export class AccountService extends ApiService {
             this.doPost("externalTransaction/testExternalPayment",model,callbackOnSuccess,callbackOnFailure);
       }
     
-      sendPaymentData(model: Payment, callbackOnSuccess,callbackOnFailure){
+      sendPaymentData(model: Payment, callbackOnSuccess,callbackOnFailure){ 
         this.doPost("payment/sendData",model,callbackOnSuccess,callbackOnFailure);
       }
     getLoggedUser(): any {

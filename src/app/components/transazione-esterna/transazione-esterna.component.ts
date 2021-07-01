@@ -46,7 +46,7 @@ export class TransazioneEsternaComponent extends Superclasse implements OnInit {
   callbackPaymentDataSuccess(data: any): any {
     window.localStorage.setItem("urlSuccess", this.externalPayment.payment.urlSuccess)
     console.log("transazioneEsterna::: " + data);
-    this.router.navigate(["/pagamentoEsternoEseguito"]);
+    this.router.navigate(["/pagamentoEsternoEseguito"]); 
   }
   callbackPaymentDataFailure(data: any): any {
     console.log(data);
