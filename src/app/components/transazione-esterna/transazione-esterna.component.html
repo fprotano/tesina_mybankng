@@ -17,26 +17,51 @@
 	</thead>
 	<tbody>
 		<tr>
-			<form #externalPaymentForm id="externalPaymentForm" method="post" action="{{externalPayment.payment.urlNotify}}">
-				<input type="hidden" name="email">
-				<input type="hidden" name="amount">
-				<input type="hidden" name="transactionId">
-				<input type="hidden" name="customCode">
-				<input type="hidden" name="urlSuccess">
-				<input type="hidden" name="urlUnDo">
-				<input type="hidden" name="urlNotify">
-			</form>
+			<!-- <form #externalPaymentForm id="externalPaymentForm" method="post" action="{{externalPayment.payment.urlNotify}}">
 			<td></td>
 			<td><input type="text" name="customerName"></td>
 			<td><input type="text" name="customerSurname"></td>
 			<td><input type="number" name="customerCreditCardNo" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" oncopy="return false" onpaste="return false" onKeyPress="if(this.value.length>15) return false;"></td>
 			<td><input type="number" name="customerCreditCardCin" pattern="[0-9]" oncopy="return false" onpaste="return false" onKeyPress="if(this.value.length>2) return false;"></td>
-			<td><input type="month" name="customerCreditCardExpiresAt"></td>
+			<td><input type="month" name="customerCreditCardExpiresAt"></td>	 
+			</form>
+			-->
+			
+				
+
+			<td></td>
+			<td>
+				<input type="text" class="form-control" id="customerName"
+				required
+				[(ngModel)]="externalPayment.customerName" name="customerName">
+			</td>
+			<td>
+				<input type="text" class="form-control" id="customerSurname"
+				required
+				[(ngModel)]="externalPayment.customerSurname" name="customerSurname">
+			</td>
+			<td>
+				<input type="number" class="form-control" id="customerCreditCardNo"
+				required
+				[(ngModel)]="externalPayment.customerCreditCardNo" name="customerCreditCardNo"
+				pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" oncopy="return false" onpaste="return false" onKeyPress="if(this.value.length>15) return false;">
+			</td>
+			<td>
+				<input type="number" class="form-control" id="customerCreditCardCin"
+				required
+				[(ngModel)]="externalPayment.customerCreditCardCin" name="customerCreditCardCin"
+				pattern="[0-9]" oncopy="return false" onpaste="return false" onKeyPress="if(this.value.length>2) return false;">
+			</td>
+			<td>
+				<input type="month" class="form-control" id="customerCreditCardExpiresAt"
+				required
+				[(ngModel)]="externalPayment.customerCreditCardExpiresAt" name="customerCreditCardExpiresAt">
+			</td>
 			
 			<td>{{externalPayment.payment.amount}} Eur</td>
 			<td>{{externalPayment.payment.email}}</td>
 			<td>{{externalPayment.payment.customCode}}</td>
-			
+		
 		</tr>
 	</tbody>
 	</table>
@@ -45,7 +70,7 @@
 
 	
 
-<!-- ricordati di mettere l'id ccin e cnum nei due input number sopra
+<!-- da deprecare: ricordati di mettere l'id ccin e cnum nei due input number sopra
 <script>
 var cnum = document.getElementById("cnum");
 
