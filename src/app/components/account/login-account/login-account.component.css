@@ -72,7 +72,7 @@ form {
   border-radius: .15rem;
   width: 200px;
   padding: .150rem .75rem;
-  margin: 30px auto;
+  margin: 10px auto;
   font-family: 'PT Sans', sans-serif;
   letter-spacing: 2px;
 }
@@ -111,4 +111,12 @@ form {
 
 .sec-content {
   margin-top: 85%;
+}
+
+#titolo{
+  font-style: italic ;
+  font-size: 100px;
+  font-family: palatino;
+  color: #0f09bf;
+
 }
