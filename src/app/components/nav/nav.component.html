@@ -1,3 +1,5 @@
+
+
 <div *ngIf="!(account==null)">
   <div class="container-fluid" id="container">
     <div class="navbar-header" id="navbar-header">
@@ -5,15 +7,15 @@
     </div>
     <ul class="nav navbar-nav">
       <div id="row"> 
-        <li class="active"><a id="home" routerLink="/home">Home</a></li>
-        <li><a routerLink="/Inf-personali-account">Profilo</a></li>
-        <li><a (click)="findHelpCenter()" href="javascript:void(0);">HelpCenter</a></li>
-        <li><a routerLink="/list-faq">FAQ</a></li>
+        <li class="active"><a id="home" routerLink="/home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li><a routerLink="/Inf-personali-account"><span class="glyphicon glyphicon-user"></span> Profilo</a></li>
+        <li><a  (click)="findHelpCenter()" href="javascript:void(0);"><span class="glyphicon glyphicon-comment"></span> HelpCenter</a></li>
+        <li><a routerLink="/list-faq"><span class="glyphicon glyphicon-question-sign"></span> FAQ</a></li>
       </div>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
-      <li><a id="logout" (click)="logout()" href="javascript:void(0);" ><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+      <li><a id="logout" (click)="logout()" href="javascript:void(0);" ><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
     </ul>
   </div>
 </div>
