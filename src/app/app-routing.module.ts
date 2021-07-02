@@ -9,12 +9,13 @@ import { VisualizzaInformazioniComponent } from './components/account/visualizza
 import { CambiaPasswordComponent } from './components/account/cambia-password/cambia-password.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { PagamentoEseguitoComponent } from './components/pagamento-eseguito/pagamento-eseguito.component';
+import { PagamentoEsternoEseguitoComponent } from './components/pagamento-esterno-eseguito/pagamento-esterno-eseguito.component';
 import { HelpCenterThreadComponent } from './components/help-center-thread/help-center-thread.component';
 import { TransazioneEsternaComponent } from './components/transazione-esterna/transazione-esterna.component';
 
 
 const routes: Routes = [
-	 {path: '', redirectTo: '/login-account', pathMatch: 'full'}
+	  {path: '', redirectTo: '/login-account', pathMatch: 'full'}
 	, { path: "registrazione-account", component: RegistrazioneAccountComponent }
 	, { path: "login-account", component: LoginAccountComponent }
 	, { path: "home", component: HomeComponent }
@@ -25,6 +26,7 @@ const routes: Routes = [
 	, { path: "payment",component:PaymentComponent }
 	, { path: "init-payment/:id",component:LoginAccountComponent }
 	, { path: "pagamentoeseguito",component:PagamentoEseguitoComponent }
+	, { path: "pagamentoEsternoEseguito",component:PagamentoEsternoEseguitoComponent }
 	, { path: "helpCenterThread",component:HelpCenterThreadComponent }
 	, { path: "transazione-esterna", component:TransazioneEsternaComponent }
 ];

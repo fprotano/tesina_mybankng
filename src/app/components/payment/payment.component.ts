@@ -37,6 +37,7 @@ export class PaymentComponent extends Superclasse implements OnInit {
   }
   
   paySend(){
+    console.log(this.payment)
     this.accountService.pay(this.payment, this.callbackPaymnetOnSuccess.bind(this), this.callbackPaymnetOnFailure.bind(this));
   }
   undo(){

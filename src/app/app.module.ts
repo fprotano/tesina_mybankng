@@ -21,6 +21,7 @@ import { PaymentComponent } from './components/payment/payment.component';
 import { PagamentoEseguitoComponent } from './components/pagamento-eseguito/pagamento-eseguito.component';
 import { HelpCenterThreadComponent } from './components/help-center-thread/help-center-thread.component';
 import { TransazioneEsternaComponent } from './components/transazione-esterna/transazione-esterna.component';
+import { PagamentoEsternoEseguitoComponent } from './components/pagamento-esterno-eseguito/pagamento-esterno-eseguito.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { TransazioneEsternaComponent } from './components/transazione-esterna/tr
     PaymentComponent,
     PagamentoEseguitoComponent,
     HelpCenterThreadComponent,
-    TransazioneEsternaComponent
+    TransazioneEsternaComponent,
+    PagamentoEsternoEseguitoComponent
 
 
   ],
