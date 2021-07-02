@@ -29,10 +29,7 @@
 						</div>
 						<input type="button" (click)="doLoginAccount()" value="Accedi" class="btn btn-primary">
 
-						<div *ngIf="payment.email!=null">
-							<br />
-							<a routerLink="/transazione-esterna">Esegui una transazione Esterna</a>
-						</div>
+
 					</form>
 				</div>
 				<div>
@@ -55,9 +52,17 @@
 							Registrazione
 						</button>
 					</div>
+
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 <app-registrazione-account></app-registrazione-account>
+
+<div class="payment" align="center">
+	<div *ngIf="payment.email!=null">
+		<br>
+		<a routerLink="/transazione-esterna"><span class="glyphicon glyphicon-circle-arrow-right"></span><b> Esegui una transazione Esterna</b></a>
+	</div>
+</div>
