@@ -1,12 +1,14 @@
 
-
+<br>
 <br>
 <br>
 <br> 
 <div align="center">
-	<p>Ciao {{account.name}}, hai bisogno di aiuto?</p>
+	<p><b>Ciao {{account.name}}, hai bisogno di aiuto?</b></p>
 
-	<label>Descrivi il tuo problema e un operatore ti rispondera' il prima possibile  </label> <br>
-	<textarea name="question" [(ngModel)]="helpCenter.question" rows="2" cols="40"></textarea> <br>
-	<input type="button" (click)="Insert()" value="INVIA" class="btn btn-outline-success">
+	<label>Descrivi il tuo problema e un operatore ti rispondera' il prima possibile  </label> <br> 
+
+	<textarea class="testo" name="question" [(ngModel)]="helpCenter.question" rows="2" cols="40"></textarea> <br>
+
+	<input class="button" type="button" (click)="Insert()" value="INVIA" >
 </div>
