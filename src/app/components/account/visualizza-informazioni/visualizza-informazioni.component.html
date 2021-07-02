@@ -1,42 +1,43 @@
-<div align="center">
-<fieldset>
-<legend>
-	  Informazioni Personali :
-  </legend>
-<br>
-Nome:
-{{account.name}}
-<br>
-Cognome:
-{{account.surname}}
-<br>
-Email:
-{{account.email}}
-<br>
-Password:
-{{account.password}}
-<br>
-Data Registrazione:
-{{account.createdAt| date:'dd-MM-yyyy hh:mm:ss'}}
-<br>
-Ultimo Accesso:
-{{account.updateAt}}
-<br>
-Iban:
-{{account.iban}}
-<br>
-Saldo Disponibile:
-{{account.balance}}
-<br>
-Numero Carta Di Credito:
-{{account.creditCardNo}}
-<br>
-Cin:
-{{account.creditCardCin}}
-<br>
-Data Scadenza Carta Di credito:
-{{account.creditCardExpiresAt}}
+<div class="container" align="center">
+	<br> <br>
+	<fieldset>
+		<p> <b> <span class="glyphicon glyphicon-info-sign"></span> Informazioni Personali </b></p>
+		<div class="info">
+			<br>
+			<li><b>Nome:</b>
+				{{account.name}}
+				<br><br>
+			<li><b>Cognome:</b>
+				{{account.surname}}
+				<br><br>
+			<li><b>Email:</b>
+				{{account.email}}
+				<br><br>
+			<li><b>Password:</b>
+				{{account.password}}
+				<br><br>
+			<li><b>Data Registrazione:</b>
+				{{account.createdAt| date:'dd-MM-yyyy hh:mm:ss'}}
+				<br><br>
+			<li><b>Ultimo Accesso:</b>
+				{{account.updateAt}}
+				<br><br>
+			<li><b>Iban:</b>
+				{{account.iban}}
+				<br><br>
+			<li><b>Saldo Disponibile:</b>
+				{{account.balance}}
+				<br><br>
+			<li><b>Numero Carta Di Credito:</b>
+				{{account.creditCardNo}}
+				<br><br>
+			<li><b>Cin:</b>
+				{{account.creditCardCin}}
+				<br><br>
+			<li><b>Data Scadenza Carta Di credito:</b>
+				{{account.creditCardExpiresAt}}
 
-</fieldset>
+		</div>
+
+	</fieldset>
 </div>
-

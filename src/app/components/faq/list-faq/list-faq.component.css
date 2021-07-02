@@ -1,0 +1,37 @@
+.titolo{
+	font-family: rockwell;
+	font-size: 42px;
+	color: #3D59AB;
+}
+
+
+body {
+  font-family: rockwell;
+  color: black;
+  font-size: 0.9em;
+}
+
+section {
+  max-width: 340px;
+  text-align: left;
+}
+
+details {
+  background: #3D59AB;
+  color: white;
+  padding: 15px;
+  margin-bottom: 2px;
+  border-radius: 25px;
+  border: 2px solid #1F1D86;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 1.2em;
+  font-family: Segoe UI;
+}
+
+.domande{
+	word-wrap: break-word;
+}

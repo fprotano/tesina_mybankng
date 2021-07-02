@@ -1,22 +1,17 @@
-  <div align="center">
- <table>
-	<thead>
-		<th>Question </th> 
-		<br>
-		<br> 
-		<th>Answer</th>
-	</thead>
-	<tbody>
-		<tr *ngFor="let faq of faq_list">
-			<td>{{faq.question}} </td>
+<div class="faq" align="center">
+	<br> <br> <br>
+	<p class="titolo"><b>Domande frequenti</b> </p>
+	<section>
+		<details class="domande" *ngFor="let faq of faq_list">
+			<summary><span class="glyphicon glyphicon-play"></span>
+				{{faq.question}}
+			</summary>
 			<br>
-			<td>{{faq.answer}}</td>
+			<p>
+				{{faq.answer}}
+			</p>
 
-			
-			
-	</tr>
-			
-	</tbody>
-</table>
+		</details>
+	</section>
 </div>
-
+<br> <br>
