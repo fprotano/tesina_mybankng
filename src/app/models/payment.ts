@@ -10,6 +10,7 @@ export class Payment {
 	urlUndo: string;
 	urlSuccess: string;
 	urlNotify: string;
-
 	account: Account;
+	transaction_status: string;
+	transaction_days: string;
 }
