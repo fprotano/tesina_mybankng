@@ -1,5 +1,7 @@
 #container {
   background-color: #170088;
+  display: fixed;
+
 }
 
 #home {
@@ -52,13 +54,13 @@
   text-decoration: none;
   font-size: 17px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
- 
+
 }
 
 #logout a:hover {
   color: white;
 }
 
-a#logout{
-	background: transparent;
+a#logout {
+  background: transparent;
 }
