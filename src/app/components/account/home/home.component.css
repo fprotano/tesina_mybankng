@@ -621,3 +621,25 @@ q.wr{
 	border-color: black;
 	border-style: thick;
 }
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #110066;
+  color: #c2c5ed;
+  text-align: center;
+  height: 70px;
+  
+}
+
+#tel{
+	float: left;
+	margin-left: 520px;
+}
+
+#email{
+	float: right;
+	margin-right: 520px;
+}
