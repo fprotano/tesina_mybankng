@@ -1,0 +1,13 @@
+.titolo {
+  font-family: rockwell;
+  font-size: 35px;
+  color: #3D59AB;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 20px;
+  font-family: Segoe UI;
+  color: #110066;
+  font-size: 15px;
+}

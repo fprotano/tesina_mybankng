@@ -1,0 +1,24 @@
+.button{
+	font-size: 16px;
+	border-radius: 4px;
+	transition-duration: 0.4s;
+	background-color: #3D59AB;
+	color: white;
+	font-family: rockwell;
+	border: 2px solid #3D59AB;
+	
+}
+
+.button:hover{
+	background-color: white;
+	color: #3D59AB;
+	border: 2px solid #3D59AB;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 10px;
+  font-family: Segoe UI;
+  color: #110066;
+}
+

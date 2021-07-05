@@ -1,32 +1,34 @@
- <br>
- <br>
- <br>
- <div>
-	 
-	<table>
-		
-		<thead>
-			<th> Amount </th>
-			<th> Email </th>
-			<th> Codice Personale </th>
-			<th> Numero Transazione </th>
-		</thead>
-		<tbody>
-			
-			<tr>
-				<td>{{payment.amount}}</td>
-				<td>{{payment.email}}</td>
-				<td>{{payment.customCode}}</td>
-				<td>{{payment.transactionId}}</td>
-				
-				
-			</tr>
-		</tbody>
-	</table>
-	<button type="submit" (click)="pay()">Paga Ordine</button><br>
-	<br>
-	<button (click)="undo()">Annulla</button><br>
-</div>
+<br>
+<br>
+<br>
+<div align="center">
+	<div>
+
+		<table>
+
+			<thead>
+				<th> Amount </th>
+				<th> Email </th>
+				<th> Codice Personale </th>
+				<th> Numero Transazione </th>
+			</thead>
+			<tbody>
+
+				<tr>
+					<td>{{payment.amount}}</td>
+					<td>{{payment.email}}</td>
+					<td>{{payment.customCode}}</td>
+					<td>{{payment.transactionId}}</td>
+
+
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<button class="button" type="submit" (click)="pay()">Paga Ordine</button><br>
+		<br>
+		<button class="button" (click)="undo()">Annulla</button><br>
+	</div>
 
 
 	<form #paymentForm id="paymentForm" method="post" action="{{payment.urlNotify}}">
@@ -39,4 +41,4 @@
 		<input type="hidden" name="urlNotify">
 	</form>
 
-	
+</div>

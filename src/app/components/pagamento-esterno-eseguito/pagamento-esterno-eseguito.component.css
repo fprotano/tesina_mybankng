@@ -1,0 +1,23 @@
+p{
+  color: #110066;
+  font-family: Segoe UI;
+  font-size: 20px;
+}
+
+a:link, a:visited {
+  background-color: #3D59AB;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: rockwell;
+  border: 2px solid #3D59AB;
+  border-radius: 4px;
+}
+
+a:hover, a:active {
+  background-color: white;
+	color: #3D59AB;
+	border: 2px solid #3D59AB;
+}

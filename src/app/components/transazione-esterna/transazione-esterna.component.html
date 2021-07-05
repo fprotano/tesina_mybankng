@@ -1,23 +1,16 @@
-
-
-
-<fieldset> 
-	<legend>Inserisci i dati per una transazione esterna:</legend>
-	<table>
-	<thead>
-		<th>Mittente:</th>
-		<th>Nome</th>
-		<th>Cognome</th>
-		<th>Carta</th>
-		<th>CIN</th>
-		<th>Scadenza</th>
-		<th>Importo</th>
-		<th>Email Destinatario</th>
-		<th>Codice Relativo</th>
-	</thead>
-	<tbody>
-		<tr>
-			<!-- <form #externalPaymentForm id="externalPaymentForm" method="post" action="{{externalPayment.payment.urlNotify}}">
+<div align="center">
+	<fieldset>
+		<br>
+		<p class="titolo"><b>Inserisci i dati per una transazione esterna: </b></p>
+		<br>
+		<table>
+			<thead>
+				<th>Nome</th>
+				<th>Cognome</th>
+			</thead>
+			<tbody>
+				<tr>
+					<!-- <form #externalPaymentForm id="externalPaymentForm" method="post" action="{{externalPayment.payment.urlNotify}}">
 			<td></td>
 			<td><input type="text" name="customerName"></td>
 			<td><input type="text" name="customerSurname"></td>
@@ -26,49 +19,65 @@
 			<td><input type="month" name="customerCreditCardExpiresAt"></td>	 
 			</form>
 			-->
-			
-				
 
-			<td></td>
-			<td>
-				<input type="text" class="form-control" id="customerName"
-				required
-				[(ngModel)]="externalPayment.customerName" name="customerName">
-			</td>
-			<td>
-				<input type="text" class="form-control" id="customerSurname"
-				required
-				[(ngModel)]="externalPayment.customerSurname" name="customerSurname">
-			</td>
-			<td>
-				<input type="number" class="form-control" id="customerCreditCardNo"
-				required
-				[(ngModel)]="externalPayment.customerCreditCardNo" name="customerCreditCardNo"
-				pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" oncopy="return false" onpaste="return false" onKeyPress="if(this.value.length>15) return false;">
-			</td>
-			<td>
-				<input type="number" class="form-control" id="customerCreditCardCin"
-				required
-				[(ngModel)]="externalPayment.customerCreditCardCin" name="customerCreditCardCin"
-				pattern="[0-9]" oncopy="return false" onpaste="return false" onKeyPress="if(this.value.length>2) return false;">
-			</td>
-			<td>
-				<input type="month" class="form-control" id="customerCreditCardExpiresAt"
-				required
-				[(ngModel)]="externalPayment.customerCreditCardExpiresAt" name="customerCreditCardExpiresAt">
-			</td>
-			
-			<td>{{externalPayment.payment.amount}} Eur</td>
-			<td>{{externalPayment.payment.email}}</td>
-			<td>{{externalPayment.payment.customCode}}</td>
-		
-		</tr>
-	</tbody>
-	</table>
-	<button type="submit" (click)="externalPay()">Paga Ordine</button><br>
-</fieldset>
 
-	
+
+					<td>
+						<input type="text" class="form-control" id="customerName" required
+							[(ngModel)]="externalPayment.customerName" name="customerName">
+					</td>
+					<td>
+						<input type="text" class="form-control" id="customerSurname" required
+							[(ngModel)]="externalPayment.customerSurname" name="customerSurname">
+					</td>
+
+				</tr>
+				<br>
+				<tr>
+					<th>Carta</th>
+					<th>CIN</th>
+					<th>Scadenza</th>
+				</tr>
+
+				<tr>
+					<td>
+						<input type="number" class="form-control" id="customerCreditCardNo" required
+							[(ngModel)]="externalPayment.customerCreditCardNo" name="customerCreditCardNo"
+							pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" oncopy="return false" onpaste="return false"
+							onKeyPress="if(this.value.length>15) return false;">
+					</td>
+					<td>
+						<input type="number" class="form-control" id="customerCreditCardCin" required
+							[(ngModel)]="externalPayment.customerCreditCardCin" name="customerCreditCardCin"
+							pattern="[0-9]" oncopy="return false" onpaste="return false"
+							onKeyPress="if(this.value.length>2) return false;">
+					</td>
+					<td>
+						<input type="month" class="form-control" id="customerCreditCardExpiresAt" required
+							[(ngModel)]="externalPayment.customerCreditCardExpiresAt"
+							name="customerCreditCardExpiresAt">
+					</td>
+				</tr>
+				<br>
+				<tr>
+					<th>Importo</th>
+					<th>Email Destinatario</th>
+					<th>Codice Relativo</th>
+				</tr>
+
+				<tr>
+					<td>{{externalPayment.payment.amount}} Eur</td>
+					<td>{{externalPayment.payment.email}}</td>
+					<td>{{externalPayment.payment.customCode}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<br><br>
+		<button class="button" type="submit" (click)="externalPay()">Paga Ordine</button><br>
+	</fieldset>
+</div>
+
+
 
 <!-- da deprecare: ricordati di mettere l'id ccin e cnum nei due input number sopra
 <script>
