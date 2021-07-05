@@ -12,7 +12,7 @@ import { PagamentoEseguitoComponent } from './components/pagamento-eseguito/paga
 import { PagamentoEsternoEseguitoComponent } from './components/pagamento-esterno-eseguito/pagamento-esterno-eseguito.component';
 import { HelpCenterThreadComponent } from './components/help-center-thread/help-center-thread.component';
 import { TransazioneEsternaComponent } from './components/transazione-esterna/transazione-esterna.component';
-
+ 
 
 const routes: Routes = [
 	  {path: '', redirectTo: '/login-account', pathMatch: 'full'}
